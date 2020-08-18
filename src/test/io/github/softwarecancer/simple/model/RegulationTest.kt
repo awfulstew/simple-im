@@ -8,8 +8,8 @@ class RegulationTest {
   @Test
   fun `test crif regulation from role method`() {
     val reg = Regulation("[\"CPS\",\"   HELLO\", \"OTHER\" ]", "[]")
-    assertEquals(setOf("CPS", "HELLO", "OTHER"), reg.byRole(ImRole.PLEDGOR))
-    assertEquals(setOf(""), reg.byRole(ImRole.SECURED))
+    assertEquals(setOf("CPS", "HELLO", "OTHER"), reg.byRole(Regulation.Role.PLEDGOR))
+    assertEquals(setOf(""), reg.byRole(Regulation.Role.SECURED))
   }
 
 }
