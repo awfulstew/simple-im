@@ -1,6 +1,6 @@
-package io.github.softwarecancer.simple.model
+package io.github.softwarecancer.im.simple.model
 
-import org.junit.jupiter.api.Test
+import kotlin.test.Test
 import kotlin.test.assertEquals
 
 class RegulationTest {

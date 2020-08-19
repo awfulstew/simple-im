@@ -1,4 +1,4 @@
-package io.github.softwarecancer.simple.model
+package io.github.softwarecancer.im.simple.model
 
 class Regulation(private val postRegulation: String, private val collectRegulation: String) {
 
