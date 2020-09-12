@@ -7,7 +7,7 @@ import kotlin.IllegalStateException
 
 @Serializable
 data class Crif @JvmOverloads constructor(
-  @SerialName("tradeId") val id: String? = null,
+  val tradeId: String? = null,
   @SerialName("valuationDate") val valDate: String? = null,
   val endDate: String? = null,
   @SerialName("notional") val notionalString: String? = null,
@@ -102,6 +102,7 @@ data class Crif @JvmOverloads constructor(
       _sensitivity != null -> _sensitivity
       riskType.endsWith(SensitivityType.VEGA_SUFFIX, ignoreCase = true) -> SensitivityType.VEGA
       riskType.equals(RiskType.SIMM_BASE_CORR_LABEL, ignoreCase = true) -> SensitivityType.BASE_CORRELATION
+      // since we already check for the vega suffix, any remaining SIMM sensitivities must be delta
       riskType.toUpperCase() in RiskType.SIMM_STANDARD.labels -> SensitivityType.DELTA
       else -> throw IllegalStateException("Unknown risk type when determining sensitivity type: [${riskType}]")
     }
@@ -118,6 +119,46 @@ data class Crif @JvmOverloads constructor(
       }
       else -> BucketType.values().filter { it.bucket.equals(bucketLabel, ignoreCase = true) && it.risk == risk }
         .getOrElse(0) { throw IllegalStateException("Unable to find bucket for bucket [${bucketLabel}] in [${risk}]") }
+    }
+  }
+
+  data class Identifier(
+    val tradeId: String?,
+    val model: String?,
+    val productType: String?,
+    val riskType: String?,
+    val qualifier: String?,
+    val bucketLabel: String?,
+    val labelOne: String?,
+    val labelTwo: String?
+  )
+
+  val identifier: Identifier by lazy {
+    when (imModel) {
+      // we want to group schedule trades by the tradeId and the risk type
+      ImModel.SCHEDULE -> Identifier(tradeId, model = null, productType = null, riskType, qualifier = null, bucketLabel = null, labelOne = null, labelTwo = null)
+      ImModel.SIMM -> when (sensitivity) {
+        SensitivityType.VEGA, SensitivityType.CURVATURE -> when (risk) {
+          // set the labels to null since we want to net across all of the tenors (label1) and label2 should not be set
+          RiskType.SIMM_EQUITY, RiskType.SIMM_COMMODITY -> Identifier(tradeId = null, model, productType, riskType, qualifier, bucketLabel, labelOne = null, labelTwo = null)
+          // for the inflation vega sensitivities we want to net across tenors
+          RiskType.SIMM_INTEREST_RATES -> if (riskType.equals(RiskType.SIMM_INFLATION_VOL_LABEL, ignoreCase = true)) {
+            Identifier(tradeId = null, model, productType, riskType, qualifier, bucketLabel, labelOne = null, labelTwo)
+          } else {
+            Identifier(tradeId = null, model, productType, riskType, qualifier, bucketLabel, labelOne, labelTwo)
+          }
+          // for FX we need to net across the tenors as well as fix the qualifier so that it is consistently ordered
+          RiskType.SIMM_FX -> {
+            // break the qualifier into two chunks of length 3 (the currency codes) and then sort
+            val orderedCurrencies: String = qualifier!!.chunked(3).sorted().reduce(String::plus)
+            Identifier(tradeId = null, model, productType, riskType, orderedCurrencies, bucketLabel, labelOne = null, labelTwo = null)
+          }
+          // all other risk types should be identified as is
+          else -> Identifier(tradeId = null, model, productType, riskType, qualifier, bucketLabel, labelOne, labelTwo)
+        }
+        // all other sensitivity types should be identified as is
+        else -> Identifier(tradeId = null, model, productType, riskType, qualifier, bucketLabel, labelOne, labelTwo)
+      }
     }
   }
 

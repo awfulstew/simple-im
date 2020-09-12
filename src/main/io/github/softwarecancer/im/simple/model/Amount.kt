@@ -6,7 +6,7 @@ import kotlin.IllegalStateException
 class Amount(private val amount: String, private val currency: String?, private val amountUsd: String?) {
 
   companion object {
-    lateinit var fx: FxRateConverter
+    lateinit var fx: FxRate
     private val currencyRegex: Regex = """\w{3}""".toRegex()
   }
 
@@ -17,7 +17,7 @@ class Amount(private val amount: String, private val currency: String?, private 
       // convert the amount to USD using fx implementation if currency is provided and matches currency code format
       !currency.isNullOrBlank() && currency.matches(currencyRegex) -> fx.convert(BigDecimal(amount), currency, "USD")
       // if the currency is not in the expected format then throw
-      !currency.isNullOrBlank() && !currency.matches(currencyRegex) -> throw IllegalStateException("Currency did not match expected regex: [${currency}]")
+      !currency.isNullOrBlank() && !currency.matches(currencyRegex) -> throw IllegalStateException("Currency did not match expected currency code format: [${currency}]")
       // all other cases try to return just the amount since there is no associated currency
       else -> BigDecimal(amount) // should throw if poorly formatted
     }
