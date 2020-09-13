@@ -21,16 +21,16 @@ enum class HoldingPeriod {
 }
 
 class CalculationConfig(
-  private val resultCurrency: String?,
-  private val role: Regulation.Role?,
-  private val simmCalculationType: SimmCalculationType?,
-  private val holdingPeriod: HoldingPeriod?,
-  private val calculationCurrency: String?,
-  private val useSingleProductType: Boolean?,
-  private val countTradesPerLevel: Boolean?,
-  private val enableConcentrationThresholds: Boolean?,
-  private val scheduleCalculationType: ScheduleCalculationType?,
-  private val netGrossRate: BigDecimal?
+  val resultCurrency: String?,
+  val role: Regulation.Role?,
+  val simmCalculationType: SimmCalculationType?,
+  val holdingPeriod: HoldingPeriod?,
+  val calculationCurrency: String?,
+  val useSingleProductType: Boolean?,
+  val countTradesPerLevel: Boolean?,
+  val enableConcentrationThresholds: Boolean?,
+  val scheduleCalculationType: ScheduleCalculationType?,
+  val netGrossRate: BigDecimal?
 ) {
 
   data class Builder(
