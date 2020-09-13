@@ -19,7 +19,7 @@ class FxRateTest {
       }
     }
 
-    Amount.fx = SimpleFxRate()
+    FxRate.singleton = SimpleFxRate()
 
     val eur = Crif(riskType = RiskType.SIMM_FX_LABEL, productType = "RatesFx", amount = "100.00", amountCurrency = "EUR")
     assertEquals(BigDecimal.valueOf(150), eur.value.getAmount().setScale(0))

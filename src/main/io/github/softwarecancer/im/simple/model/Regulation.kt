@@ -10,8 +10,6 @@ class Regulation(private val postRegulation: String, private val collectRegulati
     @JvmStatic val INCLUDED = "INCLUDED"
     @JvmStatic val BLANK_REGULATOR_STRING = ""
     @JvmStatic val ALL_REGULATORS_STRING = "SIMPLE_ALL_REGS_WILDCARD"
-
-
   }
 
   enum class Role(private val role: String) {

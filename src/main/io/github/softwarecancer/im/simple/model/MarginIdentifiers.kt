@@ -1,53 +1,61 @@
 package io.github.softwarecancer.im.simple.model
 
-enum class ImModel(val labels: List<String>) {
-  SIMM(listOf("SIMM", "SIMM-P")),
-  SCHEDULE(listOf("SCHEDULE"));
+interface MarginIdentifier {
+  val identifier: String
 }
 
-enum class ProductType(val label: String) {
-  SIMM_RATES_FX("RatesFx".toUpperCase()),
-  SIMM_CREDIT("Credit".toUpperCase()),
-  SIMM_EQUITY("Equity".toUpperCase()),
-  SIMM_COMMODITY("Commodity".toUpperCase()),
-  SIMM_SINGLE("Single".toUpperCase()),
-  SCHEDULE_FX("FX".toUpperCase()),
-  SCHEDULE_RATES("Rates".toUpperCase()),
-  SCHEDULE_CREDIT("Credit".toUpperCase()),
-  SCHEDULE_EQUITY("Equity".toUpperCase()),
-  SCHEDULE_COMMODITY("Commodity".toUpperCase());
+class TotalIdentifier : MarginIdentifier {
+  override val identifier: String = "Total"
 }
 
-enum class RiskType(val labels: List<String>) {
-  SIMM_INTEREST_RATES(listOf(
+enum class ImModel(override val identifier: String, val labels: List<String>): MarginIdentifier {
+  SIMM("Simm", listOf("SIMM", "SIMM-P")),
+  SCHEDULE("Schedule", listOf("SCHEDULE"));
+}
+
+enum class ProductType(override val identifier: String, val label: String): MarginIdentifier {
+  SIMM_RATES_FX("RatesFx", "RatesFx".toUpperCase()),
+  SIMM_CREDIT("Credit", "Credit".toUpperCase()),
+  SIMM_EQUITY("Equity", "Equity".toUpperCase()),
+  SIMM_COMMODITY("Commodity", "Commodity".toUpperCase()),
+  SIMM_SINGLE("Single", "Single".toUpperCase()),
+  SCHEDULE_FX("FX", "FX".toUpperCase()),
+  SCHEDULE_RATES("Rates", "Rates".toUpperCase()),
+  SCHEDULE_CREDIT("Credit", "Credit".toUpperCase()),
+  SCHEDULE_EQUITY("Equity", "Equity".toUpperCase()),
+  SCHEDULE_COMMODITY("Commodity", "Commodity".toUpperCase());
+}
+
+enum class RiskType(override val identifier: String, val labels: List<String>): MarginIdentifier {
+  SIMM_INTEREST_RATES("IR", listOf(
     RiskType.SIMM_IR_CURVE_LABEL.toUpperCase(),
     RiskType.SIMM_IR_VOL_LABEL.toUpperCase(),
     RiskType.SIMM_INFLATION_LABEL.toUpperCase(),
     RiskType.SIMM_INFLATION_VOL_LABEL.toUpperCase(),
     RiskType.SIMM_XCCY_BASIS_LABEL.toUpperCase()
   )),
-  SIMM_CREDIT_QUALIFYING(listOf(
+  SIMM_CREDIT_QUALIFYING("CreditQ", listOf(
     RiskType.SIMM_CREDIT_Q_LABEL.toUpperCase(),
     RiskType.SIMM_CREDIT_Q_VOL_LABEL.toUpperCase(),
     RiskType.SIMM_BASE_CORR_LABEL.toUpperCase()
   )),
-  SIMM_CREDIT_NON_QUALIFYING(listOf(
+  SIMM_CREDIT_NON_QUALIFYING("CreditNonQ", listOf(
     RiskType.SIMM_CREDIT_NON_Q_LABEL.toUpperCase(),
     RiskType.SIMM_CREDIT_NON_Q_VOL_LABEL.toUpperCase()
   )),
-  SIMM_EQUITY(listOf(
+  SIMM_EQUITY("Equity", listOf(
     RiskType.SIMM_EQUITY_LABEL.toUpperCase(),
     RiskType.SIMM_EQUITY_VOL_LABEL.toUpperCase()
   )),
-  SIMM_COMMODITY(listOf(
+  SIMM_COMMODITY("Commodity", listOf(
     RiskType.SIMM_COMMODITY_LABEL.toUpperCase(),
     RiskType.SIMM_COMMODITY_VOL_LABEL.toUpperCase()
   )),
-  SIMM_FX(listOf(
+  SIMM_FX("FX", listOf(
     RiskType.SIMM_FX_LABEL.toUpperCase(),
     RiskType.SIMM_FX_VOL_LABEL.toUpperCase()
   )),
-  SIMM_STANDARD(listOf(
+  SIMM_STANDARD("Standard", listOf(
     RiskType.SIMM_IR_CURVE_LABEL.toUpperCase(),
     RiskType.SIMM_IR_VOL_LABEL.toUpperCase(),
     RiskType.SIMM_INFLATION_LABEL.toUpperCase(),
@@ -65,19 +73,19 @@ enum class RiskType(val labels: List<String>) {
     RiskType.SIMM_FX_LABEL.toUpperCase(),
     RiskType.SIMM_FX_VOL_LABEL.toUpperCase()
   )),
-  SIMM_ADD_ON_NOTIONAL(listOf(RiskType.ADD_ON_NOTIONAL_LABEL.toUpperCase())),
-  SIMM_ADD_ON_FIXED_AMOUNT(listOf(RiskType.ADD_ON_FIXED_LABEL.toUpperCase())),
-  SIMM_ADD_ON_NOTIONAL_FACTOR(listOf(RiskType.ADD_ON_FACTOR_LABEL.toUpperCase())),
-  SIMM_ADD_ON_PRODUCT_MULTIPLIER(listOf(RiskType.ADD_ON_MULTIPLIER_LABEL.toUpperCase())),
-  SIMM_ADD_ON(listOf(
+  SIMM_ADD_ON_NOTIONAL("Notional", listOf(RiskType.ADD_ON_NOTIONAL_LABEL.toUpperCase())),
+  SIMM_ADD_ON_FIXED_AMOUNT("Fixed", listOf(RiskType.ADD_ON_FIXED_LABEL.toUpperCase())),
+  SIMM_ADD_ON_NOTIONAL_FACTOR("Factor", listOf(RiskType.ADD_ON_FACTOR_LABEL.toUpperCase())),
+  SIMM_ADD_ON_PRODUCT_MULTIPLIER("Multiplier", listOf(RiskType.ADD_ON_MULTIPLIER_LABEL.toUpperCase())),
+  SIMM_ADD_ON("AddOn", listOf(
     RiskType.ADD_ON_NOTIONAL_LABEL.toUpperCase(),
     RiskType.ADD_ON_FACTOR_LABEL.toUpperCase(),
     RiskType.ADD_ON_FIXED_LABEL.toUpperCase(),
     RiskType.ADD_ON_MULTIPLIER_LABEL.toUpperCase()
   )),
-  SCHEDULE_NOTIONAL(listOf(RiskType.SCHEDULE_NOTIONAL_LABEL.toUpperCase())),
-  SCHEDULE_PV(listOf(RiskType.SCHEDULE_PV_LABEL.toUpperCase())),
-  SCHEDULE(listOf(
+  SCHEDULE_NOTIONAL("Notional", listOf(RiskType.SCHEDULE_NOTIONAL_LABEL.toUpperCase())),
+  SCHEDULE_PV("PV", listOf(RiskType.SCHEDULE_PV_LABEL.toUpperCase())),
+  SCHEDULE("Schedule", listOf(
     RiskType.SCHEDULE_NOTIONAL_LABEL.toUpperCase(),
     RiskType.SCHEDULE_PV_LABEL.toUpperCase()
   ));
@@ -108,11 +116,11 @@ enum class RiskType(val labels: List<String>) {
   }
 }
 
-enum class SensitivityType {
-  DELTA,
-  VEGA,
-  CURVATURE,
-  BASE_CORRELATION;
+enum class SensitivityType(override val identifier: String): MarginIdentifier {
+  DELTA("Delta"),
+  VEGA("Vega"),
+  CURVATURE("Curvature"),
+  BASE_CORRELATION("BaseCorrelation");
 
   companion object {
     const val VEGA_SUFFIX = "Vol"

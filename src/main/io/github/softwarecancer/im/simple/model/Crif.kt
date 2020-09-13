@@ -138,7 +138,8 @@ data class Crif @JvmOverloads constructor(
       // we want to group schedule trades by the tradeId and the risk type
       ImModel.SCHEDULE -> Identifier(tradeId, model = null, productType = null, riskType, qualifier = null, bucketLabel = null, labelOne = null, labelTwo = null)
       ImModel.SIMM -> when (sensitivity) {
-        SensitivityType.VEGA, SensitivityType.CURVATURE -> when (risk) {
+        SensitivityType.VEGA,
+        SensitivityType.CURVATURE -> when (risk) {
           // set the labels to null since we want to net across all of the tenors (label1) and label2 should not be set
           RiskType.SIMM_EQUITY, RiskType.SIMM_COMMODITY -> Identifier(tradeId = null, model, productType, riskType, qualifier, bucketLabel, labelOne = null, labelTwo = null)
           // for the inflation vega sensitivities we want to net across tenors
@@ -156,8 +157,8 @@ data class Crif @JvmOverloads constructor(
           // all other risk types should be identified as is
           else -> Identifier(tradeId = null, model, productType, riskType, qualifier, bucketLabel, labelOne, labelTwo)
         }
-        // all other sensitivity types should be identified as is
-        else -> Identifier(tradeId = null, model, productType, riskType, qualifier, bucketLabel, labelOne, labelTwo)
+        SensitivityType.DELTA,
+        SensitivityType.BASE_CORRELATION -> Identifier(tradeId = null, model, productType, riskType, qualifier, bucketLabel, labelOne, labelTwo)
       }
     }
   }
