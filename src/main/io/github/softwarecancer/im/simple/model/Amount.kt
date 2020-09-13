@@ -22,4 +22,12 @@ class Amount(private val amount: String, private val currency: String?, private 
       else -> BigDecimal(amount) // should throw if poorly formatted
     }
   }
+
+  fun getAmount(model: ImModel, riskType: String, role: Regulation.Role): BigDecimal {
+    return when {
+      role == Regulation.Role.PLEDGOR && model == ImModel.SIMM && RiskType.SIMM_STANDARD.labels.contains(riskType) -> getAmount().negate()
+      role == Regulation.Role.SECURED && model == ImModel.SCHEDULE && RiskType.SCHEDULE_PV.labels.contains(riskType) -> getAmount().negate()
+      else -> getAmount() // return the normal amount without conversion
+    }
+  }
 }
