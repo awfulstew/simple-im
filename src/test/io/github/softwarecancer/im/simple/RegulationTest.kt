@@ -1,4 +1,4 @@
-package io.github.softwarecancer.im.simple.model
+package io.github.softwarecancer.im.simple
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -23,8 +23,8 @@ class RegulationTest {
       Crif(riskType = RiskType.SIMM_FX_LABEL, productType = "RatesFx", amount = "100.00"),
     )
 
-    assertEquals(setOf(Regulation.BLANK_REGULATOR_STRING), findRegulationSet(crif, Regulation.Role.SECURED))
-    assertEquals(setOf(Regulation.BLANK_REGULATOR_STRING), findRegulationSet(crif, Regulation.Role.PLEDGOR))
+    assertEquals(setOf(Regulation.BLANK_REGULATOR_STRING), Regulation.findRegulationSet(crif, Regulation.Role.SECURED))
+    assertEquals(setOf(Regulation.BLANK_REGULATOR_STRING), Regulation.findRegulationSet(crif, Regulation.Role.PLEDGOR))
   }
 
   @Test
@@ -39,8 +39,8 @@ class RegulationTest {
       Crif(riskType = RiskType.SIMM_FX_LABEL, productType = "RatesFx", amount = "100.00", post = ""),
       )
 
-    assertEquals(setOf(Regulation.BLANK_REGULATOR_STRING), findRegulationSet(crif, Regulation.Role.SECURED))
-    assertEquals(setOf(Regulation.BLANK_REGULATOR_STRING), findRegulationSet(crif, Regulation.Role.PLEDGOR))
+    assertEquals(setOf(Regulation.BLANK_REGULATOR_STRING), Regulation.findRegulationSet(crif, Regulation.Role.SECURED))
+    assertEquals(setOf(Regulation.BLANK_REGULATOR_STRING), Regulation.findRegulationSet(crif, Regulation.Role.PLEDGOR))
   }
 
   @Test
@@ -54,8 +54,8 @@ class RegulationTest {
       Crif(riskType = RiskType.SIMM_FX_LABEL, productType = "RatesFx", amount = "100.00", post = "included"),
     )
 
-    assertEquals(setOf(Regulation.INCLUDED), findRegulationSet(crif, Regulation.Role.SECURED))
-    assertEquals(setOf(Regulation.INCLUDED), findRegulationSet(crif, Regulation.Role.PLEDGOR))
+    assertEquals(setOf(Regulation.INCLUDED), Regulation.findRegulationSet(crif, Regulation.Role.SECURED))
+    assertEquals(setOf(Regulation.INCLUDED), Regulation.findRegulationSet(crif, Regulation.Role.PLEDGOR))
   }
 
   @Test
@@ -69,8 +69,8 @@ class RegulationTest {
       Crif(riskType = RiskType.SIMM_FX_LABEL, productType = "RatesFx", amount = "100.00", post = "included"),
     )
 
-    assertEquals(setOf(Regulation.INCLUDED), findRegulationSet(crif, Regulation.Role.SECURED))
-    assertEquals(setOf(Regulation.INCLUDED), findRegulationSet(crif, Regulation.Role.PLEDGOR))
+    assertEquals(setOf(Regulation.INCLUDED), Regulation.findRegulationSet(crif, Regulation.Role.SECURED))
+    assertEquals(setOf(Regulation.INCLUDED), Regulation.findRegulationSet(crif, Regulation.Role.PLEDGOR))
   }
 
   @Test
@@ -84,8 +84,8 @@ class RegulationTest {
       Crif(riskType = RiskType.SIMM_FX_LABEL, productType = "RatesFx", amount = "100.00", post = "ABC"),
     )
 
-    assertEquals(setOf("ABC", "XYZ"), findRegulationSet(crif, Regulation.Role.SECURED))
-    assertEquals(setOf("ABC", "XYZ"), findRegulationSet(crif, Regulation.Role.PLEDGOR))
+    assertEquals(setOf("ABC", "XYZ"), Regulation.findRegulationSet(crif, Regulation.Role.SECURED))
+    assertEquals(setOf("ABC", "XYZ"), Regulation.findRegulationSet(crif, Regulation.Role.PLEDGOR))
   }
 
 }

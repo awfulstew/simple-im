@@ -1,8 +1,9 @@
-package io.github.softwarecancer.im.simple.model
+package io.github.softwarecancer.im.simple
 
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Transient
+import java.math.BigDecimal
 import kotlin.IllegalStateException
 
 @Serializable
@@ -20,26 +21,31 @@ data class Crif @JvmOverloads constructor(
   @SerialName("bucket") val bucketLabel: String? = null,
   val labelOne: String? = null,
   val labelTwo: String? = null,
-  @SerialName("postRegulation") val post: String? = null,
-  @SerialName("collectRegulation") val collect: String? = null,
+  @SerialName("postRegulation") val post: String = Regulation.BLANK_REGULATOR_STRING,
+  @SerialName("collectRegulation") val collect: String = Regulation.BLANK_REGULATOR_STRING,
   val amount: String,
-  val amountCurrency: String? = null,
+  val amountCurrency: String = "USD",
   val amountUsd: String? = null,
   @Transient private val _sensitivity: SensitivityType? = null
 ) {
 
   @Transient
-  val regulation: Regulation = Regulation(
-    post ?: Regulation.BLANK_REGULATOR_STRING,
-    collect ?: Regulation.BLANK_REGULATOR_STRING
-  )
+  val regulation: Regulation = Regulation(post, collect)
+
+  @Transient
+  val value: Amount = Amount(amount, amountCurrency, amountUsd)
+
+  fun getValue(config: CalculationConfig): BigDecimal {
+    return when {
+      config.role == Regulation.Role.PLEDGOR && imModel == ImModel.SIMM && RiskType.SIMM_STANDARD.labels.contains(riskType) -> value.getAmount(config).negate()
+      config.role == Regulation.Role.SECURED && imModel == ImModel.SCHEDULE && RiskType.SCHEDULE_PV.labels.contains(riskType) -> value.getAmount(config).negate()
+      else -> value.getAmount(config) // return the normal amount without conversion
+    }
+  }
 
   val notional: Amount by lazy {
     Amount(notionalString!!, notionalCurrency!!, notionalUsd)
   }
-
-  @Transient
-  val value: Amount = Amount(amount, amountCurrency, amountUsd)
 
   val imModel: ImModel by lazy {
     if (model.isNullOrBlank()) {

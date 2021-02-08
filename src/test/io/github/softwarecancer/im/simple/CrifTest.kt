@@ -1,9 +1,16 @@
-package io.github.softwarecancer.im.simple.model
+package io.github.softwarecancer.im.simple
 
+import java.math.BigDecimal
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import io.github.softwarecancer.im.simple.CrifTest.ListCarry.Companion.TWO_LABEL as TWO_LABEL
 
 class CrifTest {
+
+  @Test
+  fun `check that sum of empty list results in zero`() {
+    assertEquals(BigDecimal.ZERO, sumMargin(listOf<ImModelMargin>()))
+  }
 
   @Test
   fun `check sensitivity type is correctly initialized`() {

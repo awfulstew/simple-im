@@ -1,4 +1,4 @@
-package io.github.softwarecancer.im.simple.model
+package io.github.softwarecancer.im.simple
 
 interface MarginIdentifier {
   val identifier: String

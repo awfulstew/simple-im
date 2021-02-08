@@ -1,4 +1,4 @@
-package io.github.softwarecancer.im.simple.model
+package io.github.softwarecancer.im.simple
 
 import java.math.BigDecimal
 import kotlin.test.Test
@@ -19,23 +19,11 @@ class FxRateTest {
       }
     }
 
-    FxRate.singleton = SimpleFxRate()
+    val config = CalculationConfig.Builder().fxRate(SimpleFxRate()).resultCurrency(FxRate.USD).build()
 
     val eur = Crif(riskType = RiskType.SIMM_FX_LABEL, productType = "RatesFx", amount = "100.00", amountCurrency = "EUR")
-    assertEquals(BigDecimal.valueOf(150), eur.value.getAmount().setScale(0))
+    assertEquals(BigDecimal.valueOf(150), eur.value.getAmount(config).setScale(0))
     val other = Crif(riskType = RiskType.SIMM_FX_LABEL, productType = "RatesFx", amount = "100.00", amountCurrency = "USD")
-    assertEquals(BigDecimal.valueOf(100), other.value.getAmount().setScale(0))
-  }
-
-  @Test
-  fun `test unset fx rate throws`() {
-    assertFailsWith(UninitializedPropertyAccessException::class) {
-      Crif(
-        riskType = RiskType.SIMM_FX_LABEL,
-        productType = "RatesFx",
-        amount = "100.00",
-        amountCurrency = "EUR"
-      ).value.getAmount()
-    }
+    assertEquals(BigDecimal.valueOf(100), other.value.getAmount(config).setScale(0))
   }
 }
