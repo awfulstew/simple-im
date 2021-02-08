@@ -64,7 +64,7 @@ class Schedule(
   companion object {
     @JvmStatic
     fun calculate(crif: List<Crif>, config: CalculationConfig): ImResult<TotalIdentifier, ImModelMargin> {
-      return Simm(
+      return Schedule(
         children = crif.asSequence()
           .filter { it.imModel == ImModel.SCHEDULE }
           .map { ScheduleMargin.calculate(crif, config) }
