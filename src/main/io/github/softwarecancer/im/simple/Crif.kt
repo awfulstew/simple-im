@@ -73,8 +73,11 @@ data class Crif @JvmOverloads constructor(
         ProductType.SIMM_CREDIT.label -> ProductType.SIMM_CREDIT
         ProductType.SIMM_EQUITY.label -> ProductType.SIMM_EQUITY
         ProductType.SIMM_COMMODITY.label -> ProductType.SIMM_COMMODITY
-        ProductType.SIMM_SINGLE.label -> ProductType.SIMM_SINGLE
-        else -> throw IllegalStateException("Unknown product label found when determining class for SIMM: [${productType}]")
+        else -> if (riskType in RiskType.SIMM_ADD_ON.labels) {
+          ProductType.SIMM_ADD_ON
+        } else {
+          throw IllegalStateException("Unknown product label found when determining class for SIMM: [${productType}]")
+        }
       }
       ImModel.SCHEDULE -> when(productType.toUpperCase()) {
         ProductType.SCHEDULE_RATES.label -> ProductType.SCHEDULE_RATES
@@ -131,8 +134,11 @@ data class Crif @JvmOverloads constructor(
   data class Identifier(
     val tradeId: String?,
     val model: String?,
+    val imModel: ImModel,
     val productType: String?,
-    val riskType: String?,
+    val product: ProductType,
+    val riskType: String,
+    val risk: RiskType,
     val qualifier: String?,
     val bucketLabel: String?,
     val labelOne: String?,
@@ -142,29 +148,29 @@ data class Crif @JvmOverloads constructor(
   val identifier: Identifier by lazy {
     when (imModel) {
       // we want to group schedule trades by the tradeId and the risk type
-      ImModel.SCHEDULE -> Identifier(tradeId, model = null, productType = null, riskType, qualifier = null, bucketLabel = null, labelOne = null, labelTwo = null)
+      ImModel.SCHEDULE -> Identifier(tradeId, model, imModel, productType, product, riskType, risk, qualifier = null, bucketLabel = null, labelOne = null, labelTwo = null)
       ImModel.SIMM -> when (sensitivity) {
         SensitivityType.VEGA,
         SensitivityType.CURVATURE -> when (risk) {
           // set the labels to null since we want to net across all of the tenors (label1) and label2 should not be set
-          RiskType.SIMM_EQUITY, RiskType.SIMM_COMMODITY -> Identifier(tradeId = null, model, productType, riskType, qualifier, bucketLabel, labelOne = null, labelTwo = null)
+          RiskType.SIMM_EQUITY, RiskType.SIMM_COMMODITY -> Identifier(tradeId = null, model, imModel, productType, product, riskType, risk, qualifier, bucketLabel, labelOne = null, labelTwo = null)
           // for the inflation vega sensitivities we want to net across tenors
           RiskType.SIMM_INTEREST_RATES -> if (riskType.equals(RiskType.SIMM_INFLATION_VOL_LABEL, ignoreCase = true)) {
-            Identifier(tradeId = null, model, productType, riskType, qualifier, bucketLabel, labelOne = null, labelTwo)
+            Identifier(tradeId = null, model, imModel, productType, product, riskType, risk, qualifier, bucketLabel, labelOne = null, labelTwo)
           } else {
-            Identifier(tradeId = null, model, productType, riskType, qualifier, bucketLabel, labelOne, labelTwo)
+            Identifier(tradeId = null, model, imModel, productType, product, riskType, risk, qualifier, bucketLabel, labelOne, labelTwo)
           }
           // for FX we need to net across the tenors as well as fix the qualifier so that it is consistently ordered
           RiskType.SIMM_FX -> {
             // break the qualifier into two chunks of length 3 (the currency codes) and then sort
             val orderedCurrencies: String = qualifier!!.chunked(3).sorted().reduce(String::plus)
-            Identifier(tradeId = null, model, productType, riskType, orderedCurrencies, bucketLabel, labelOne = null, labelTwo = null)
+            Identifier(tradeId = null, model, imModel, productType, product, riskType, risk, orderedCurrencies, bucketLabel, labelOne = null, labelTwo = null)
           }
           // all other risk types should be identified as is
-          else -> Identifier(tradeId = null, model, productType, riskType, qualifier, bucketLabel, labelOne, labelTwo)
+          else -> Identifier(tradeId = null, model, imModel, productType, product, riskType, risk, qualifier, bucketLabel, labelOne, labelTwo)
         }
         SensitivityType.DELTA,
-        SensitivityType.BASE_CORRELATION -> Identifier(tradeId = null, model, productType, riskType, qualifier, bucketLabel, labelOne, labelTwo)
+        SensitivityType.BASE_CORRELATION -> Identifier(tradeId = null, model, imModel, productType, product, riskType, risk, qualifier, bucketLabel, labelOne, labelTwo)
       }
     }
   }

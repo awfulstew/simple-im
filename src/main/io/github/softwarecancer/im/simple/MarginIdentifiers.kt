@@ -1,11 +1,31 @@
 package io.github.softwarecancer.im.simple
 
+import java.lang.IllegalStateException
+
 interface MarginIdentifier {
   val identifier: String
 }
 
 class TotalIdentifier : MarginIdentifier {
   override val identifier: String = "Total"
+}
+
+class NettedIdentifier(
+  group: Crif.Identifier,
+) : MarginIdentifier {
+  override val identifier = when {
+    group.imModel == ImModel.SIMM && group.risk == RiskType.SIMM_FX -> group.qualifier!!
+    else -> throw IllegalStateException("Netted identifier called wih an unexpected crif identifier: $group")
+  }
+}
+
+class ScheduleTradeIdentifier(
+  group: Crif.Identifier,
+) : MarginIdentifier {
+  override val identifier = when {
+    group.imModel == ImModel.SCHEDULE -> group.tradeId!!
+    else -> throw IllegalStateException("Schedule trade identifier called wih an unexpected crif identifier: $group")
+  }
 }
 
 enum class ImModel(override val identifier: String, val labels: List<String>): MarginIdentifier {
@@ -18,6 +38,7 @@ enum class ProductType(override val identifier: String, val label: String): Marg
   SIMM_CREDIT("Credit", "Credit".toUpperCase()),
   SIMM_EQUITY("Equity", "Equity".toUpperCase()),
   SIMM_COMMODITY("Commodity", "Commodity".toUpperCase()),
+  SIMM_ADD_ON("AddOn", "AddOn".toUpperCase()),
   SIMM_SINGLE("Single", "Single".toUpperCase()),
   SCHEDULE_FX("FX", "FX".toUpperCase()),
   SCHEDULE_RATES("Rates", "Rates".toUpperCase()),

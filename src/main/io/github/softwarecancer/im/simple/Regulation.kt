@@ -93,7 +93,10 @@ class Regulation(_postRegulation: String, _collectRegulation: String) {
   fun contains(regulator: String, role: Role): Boolean {
     return byRole(role).any {
       when {
+        // if any of the regulators for the crif are all regulators string then accept
         it == ALL_REGULATORS_STRING -> true
+        // if we are checking with the all regulators string then accept
+        regulator == ALL_REGULATORS_STRING -> true
         mode == Mode.BLANK -> regulator == BLANK_REGULATOR_STRING
         mode == Mode.INCLUDED -> regulator.toUpperCase() == INCLUDED
         else -> it.equals(regulator, ignoreCase = true)
