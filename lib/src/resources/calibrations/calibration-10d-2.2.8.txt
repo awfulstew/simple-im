@@ -1,0 +1,1017 @@
+RiskType	Bucket	Label1	Label2	Parameter
+Info_SIMM_Version				2.2.8
+Info_MPOR				10
+Calib_IRCurve_Weight	1	2W		114
+Calib_IRCurve_Weight	1	1M		107
+Calib_IRCurve_Weight	1	3M		95
+Calib_IRCurve_Weight	1	6M		71
+Calib_IRCurve_Weight	1	1Y		56
+Calib_IRCurve_Weight	1	2Y		53
+Calib_IRCurve_Weight	1	3Y		50
+Calib_IRCurve_Weight	1	5Y		51
+Calib_IRCurve_Weight	1	10Y		53
+Calib_IRCurve_Weight	1	15Y		50
+Calib_IRCurve_Weight	1	20Y		54
+Calib_IRCurve_Weight	1	30Y		63
+Calib_IRCurve_Weight	2	2W		15
+Calib_IRCurve_Weight	2	1M		21
+Calib_IRCurve_Weight	2	3M		10
+Calib_IRCurve_Weight	2	6M		10
+Calib_IRCurve_Weight	2	1Y		11
+Calib_IRCurve_Weight	2	2Y		15
+Calib_IRCurve_Weight	2	3Y		18
+Calib_IRCurve_Weight	2	5Y		19
+Calib_IRCurve_Weight	2	10Y		19
+Calib_IRCurve_Weight	2	15Y		18
+Calib_IRCurve_Weight	2	20Y		20
+Calib_IRCurve_Weight	2	30Y		22
+Calib_IRCurve_Weight	3	2W		103
+Calib_IRCurve_Weight	3	1M		96
+Calib_IRCurve_Weight	3	3M		84
+Calib_IRCurve_Weight	3	6M		84
+Calib_IRCurve_Weight	3	1Y		89
+Calib_IRCurve_Weight	3	2Y		87
+Calib_IRCurve_Weight	3	3Y		90
+Calib_IRCurve_Weight	3	5Y		89
+Calib_IRCurve_Weight	3	10Y		90
+Calib_IRCurve_Weight	3	15Y		99
+Calib_IRCurve_Weight	3	20Y		100
+Calib_IRCurve_Weight	3	30Y		96
+Calib_Inflation_Weight				50
+Calib_XCcyBasis_Weight				22
+Calib_IRVol_Weight				0.16
+Calib_IRVol_HVR				0.49
+Calib_IRCurve_Corr		2W	1M	0.73
+Calib_IRCurve_Corr		2W	3M	0.64
+Calib_IRCurve_Corr		2W	6M	0.57
+Calib_IRCurve_Corr		2W	1Y	0.44
+Calib_IRCurve_Corr		2W	2Y	0.34
+Calib_IRCurve_Corr		2W	3Y	0.29
+Calib_IRCurve_Corr		2W	5Y	0.24
+Calib_IRCurve_Corr		2W	10Y	0.18
+Calib_IRCurve_Corr		2W	15Y	0.13
+Calib_IRCurve_Corr		2W	20Y	0.11
+Calib_IRCurve_Corr		2W	30Y	0.09
+Calib_IRCurve_Corr		1M	2W	0.73
+Calib_IRCurve_Corr		1M	3M	0.78
+Calib_IRCurve_Corr		1M	6M	0.67
+Calib_IRCurve_Corr		1M	1Y	0.5
+Calib_IRCurve_Corr		1M	2Y	0.37
+Calib_IRCurve_Corr		1M	3Y	0.3
+Calib_IRCurve_Corr		1M	5Y	0.24
+Calib_IRCurve_Corr		1M	10Y	0.18
+Calib_IRCurve_Corr		1M	15Y	0.13
+Calib_IRCurve_Corr		1M	20Y	0.11
+Calib_IRCurve_Corr		1M	30Y	0.1
+Calib_IRCurve_Corr		3M	2W	0.64
+Calib_IRCurve_Corr		3M	1M	0.78
+Calib_IRCurve_Corr		3M	6M	0.85
+Calib_IRCurve_Corr		3M	1Y	0.66
+Calib_IRCurve_Corr		3M	2Y	0.52
+Calib_IRCurve_Corr		3M	3Y	0.43
+Calib_IRCurve_Corr		3M	5Y	0.35
+Calib_IRCurve_Corr		3M	10Y	0.27
+Calib_IRCurve_Corr		3M	15Y	0.2
+Calib_IRCurve_Corr		3M	20Y	0.17
+Calib_IRCurve_Corr		3M	30Y	0.17
+Calib_IRCurve_Corr		6M	2W	0.57
+Calib_IRCurve_Corr		6M	1M	0.67
+Calib_IRCurve_Corr		6M	3M	0.85
+Calib_IRCurve_Corr		6M	1Y	0.81
+Calib_IRCurve_Corr		6M	2Y	0.68
+Calib_IRCurve_Corr		6M	3Y	0.59
+Calib_IRCurve_Corr		6M	5Y	0.5
+Calib_IRCurve_Corr		6M	10Y	0.41
+Calib_IRCurve_Corr		6M	15Y	0.35
+Calib_IRCurve_Corr		6M	20Y	0.33
+Calib_IRCurve_Corr		6M	30Y	0.31
+Calib_IRCurve_Corr		1Y	2W	0.44
+Calib_IRCurve_Corr		1Y	1M	0.5
+Calib_IRCurve_Corr		1Y	3M	0.66
+Calib_IRCurve_Corr		1Y	6M	0.81
+Calib_IRCurve_Corr		1Y	2Y	0.94
+Calib_IRCurve_Corr		1Y	3Y	0.85
+Calib_IRCurve_Corr		1Y	5Y	0.76
+Calib_IRCurve_Corr		1Y	10Y	0.65
+Calib_IRCurve_Corr		1Y	15Y	0.59
+Calib_IRCurve_Corr		1Y	20Y	0.56
+Calib_IRCurve_Corr		1Y	30Y	0.54
+Calib_IRCurve_Corr		2Y	2W	0.34
+Calib_IRCurve_Corr		2Y	1M	0.37
+Calib_IRCurve_Corr		2Y	3M	0.52
+Calib_IRCurve_Corr		2Y	6M	0.68
+Calib_IRCurve_Corr		2Y	1Y	0.94
+Calib_IRCurve_Corr		2Y	3Y	0.95
+Calib_IRCurve_Corr		2Y	5Y	0.89
+Calib_IRCurve_Corr		2Y	10Y	0.79
+Calib_IRCurve_Corr		2Y	15Y	0.75
+Calib_IRCurve_Corr		2Y	20Y	0.72
+Calib_IRCurve_Corr		2Y	30Y	0.7
+Calib_IRCurve_Corr		3Y	2W	0.29
+Calib_IRCurve_Corr		3Y	1M	0.3
+Calib_IRCurve_Corr		3Y	3M	0.43
+Calib_IRCurve_Corr		3Y	6M	0.59
+Calib_IRCurve_Corr		3Y	1Y	0.85
+Calib_IRCurve_Corr		3Y	2Y	0.95
+Calib_IRCurve_Corr		3Y	5Y	0.96
+Calib_IRCurve_Corr		3Y	10Y	0.88
+Calib_IRCurve_Corr		3Y	15Y	0.83
+Calib_IRCurve_Corr		3Y	20Y	0.8
+Calib_IRCurve_Corr		3Y	30Y	0.78
+Calib_IRCurve_Corr		5Y	2W	0.24
+Calib_IRCurve_Corr		5Y	1M	0.24
+Calib_IRCurve_Corr		5Y	3M	0.35
+Calib_IRCurve_Corr		5Y	6M	0.5
+Calib_IRCurve_Corr		5Y	1Y	0.76
+Calib_IRCurve_Corr		5Y	2Y	0.89
+Calib_IRCurve_Corr		5Y	3Y	0.96
+Calib_IRCurve_Corr		5Y	10Y	0.95
+Calib_IRCurve_Corr		5Y	15Y	0.91
+Calib_IRCurve_Corr		5Y	20Y	0.88
+Calib_IRCurve_Corr		5Y	30Y	0.87
+Calib_IRCurve_Corr		10Y	2W	0.18
+Calib_IRCurve_Corr		10Y	1M	0.18
+Calib_IRCurve_Corr		10Y	3M	0.27
+Calib_IRCurve_Corr		10Y	6M	0.41
+Calib_IRCurve_Corr		10Y	1Y	0.65
+Calib_IRCurve_Corr		10Y	2Y	0.79
+Calib_IRCurve_Corr		10Y	3Y	0.88
+Calib_IRCurve_Corr		10Y	5Y	0.95
+Calib_IRCurve_Corr		10Y	15Y	0.97
+Calib_IRCurve_Corr		10Y	20Y	0.95
+Calib_IRCurve_Corr		10Y	30Y	0.95
+Calib_IRCurve_Corr		15Y	2W	0.13
+Calib_IRCurve_Corr		15Y	1M	0.13
+Calib_IRCurve_Corr		15Y	3M	0.2
+Calib_IRCurve_Corr		15Y	6M	0.35
+Calib_IRCurve_Corr		15Y	1Y	0.59
+Calib_IRCurve_Corr		15Y	2Y	0.75
+Calib_IRCurve_Corr		15Y	3Y	0.83
+Calib_IRCurve_Corr		15Y	5Y	0.91
+Calib_IRCurve_Corr		15Y	10Y	0.97
+Calib_IRCurve_Corr		15Y	20Y	0.98
+Calib_IRCurve_Corr		15Y	30Y	0.98
+Calib_IRCurve_Corr		20Y	2W	0.11
+Calib_IRCurve_Corr		20Y	1M	0.11
+Calib_IRCurve_Corr		20Y	3M	0.17
+Calib_IRCurve_Corr		20Y	6M	0.33
+Calib_IRCurve_Corr		20Y	1Y	0.56
+Calib_IRCurve_Corr		20Y	2Y	0.72
+Calib_IRCurve_Corr		20Y	3Y	0.8
+Calib_IRCurve_Corr		20Y	5Y	0.88
+Calib_IRCurve_Corr		20Y	10Y	0.95
+Calib_IRCurve_Corr		20Y	15Y	0.98
+Calib_IRCurve_Corr		20Y	30Y	0.99
+Calib_IRCurve_Corr		30Y	2W	0.09
+Calib_IRCurve_Corr		30Y	1M	0.1
+Calib_IRCurve_Corr		30Y	3M	0.17
+Calib_IRCurve_Corr		30Y	6M	0.31
+Calib_IRCurve_Corr		30Y	1Y	0.54
+Calib_IRCurve_Corr		30Y	2Y	0.7
+Calib_IRCurve_Corr		30Y	3Y	0.78
+Calib_IRCurve_Corr		30Y	5Y	0.87
+Calib_IRCurve_Corr		30Y	10Y	0.95
+Calib_IRCurve_Corr		30Y	15Y	0.98
+Calib_IRCurve_Corr		30Y	20Y	0.99
+Calib_IRSubCurve_Corr				0.986
+Calib_Inflation_Corr				0.42
+Calib_XCcyBasis_Corr				0.04
+Calib_IR_CorrOuter				0.2
+Calib_CreditQ_Weight	1			75
+Calib_CreditQ_Weight	2			89
+Calib_CreditQ_Weight	3			68
+Calib_CreditQ_Weight	4			51
+Calib_CreditQ_Weight	5			50
+Calib_CreditQ_Weight	6			47
+Calib_CreditQ_Weight	7			157
+Calib_CreditQ_Weight	8			333
+Calib_CreditQ_Weight	9			142
+Calib_CreditQ_Weight	10			214
+Calib_CreditQ_Weight	11			143
+Calib_CreditQ_Weight	12			160
+Calib_CreditQ_Weight	Residual			333
+Calib_CreditVol_Weight				0.46
+Calib_BaseCorr_Weight				12
+Calib_CreditQ_Corr		Aggregate	Same	0.94
+Calib_CreditQ_Corr		Aggregate	Different	0.42
+Calib_CreditQ_Corr		Residual	Same	0.5
+Calib_CreditQ_Corr		Residual	Different	0.5
+Calib_BaseCorr_Corr				0.18
+Calib_CreditQ_CorrOuter		1	2	0.39
+Calib_CreditQ_CorrOuter		1	3	0.39
+Calib_CreditQ_CorrOuter		1	4	0.4
+Calib_CreditQ_CorrOuter		1	5	0.4
+Calib_CreditQ_CorrOuter		1	6	0.37
+Calib_CreditQ_CorrOuter		1	7	0.39
+Calib_CreditQ_CorrOuter		1	8	0.32
+Calib_CreditQ_CorrOuter		1	9	0.35
+Calib_CreditQ_CorrOuter		1	10	0.33
+Calib_CreditQ_CorrOuter		1	11	0.33
+Calib_CreditQ_CorrOuter		1	12	0.3
+Calib_CreditQ_CorrOuter		2	1	0.39
+Calib_CreditQ_CorrOuter		2	3	0.43
+Calib_CreditQ_CorrOuter		2	4	0.45
+Calib_CreditQ_CorrOuter		2	5	0.45
+Calib_CreditQ_CorrOuter		2	6	0.43
+Calib_CreditQ_CorrOuter		2	7	0.32
+Calib_CreditQ_CorrOuter		2	8	0.34
+Calib_CreditQ_CorrOuter		2	9	0.39
+Calib_CreditQ_CorrOuter		2	10	0.36
+Calib_CreditQ_CorrOuter		2	11	0.36
+Calib_CreditQ_CorrOuter		2	12	0.31
+Calib_CreditQ_CorrOuter		3	1	0.39
+Calib_CreditQ_CorrOuter		3	2	0.43
+Calib_CreditQ_CorrOuter		3	4	0.47
+Calib_CreditQ_CorrOuter		3	5	0.48
+Calib_CreditQ_CorrOuter		3	6	0.45
+Calib_CreditQ_CorrOuter		3	7	0.33
+Calib_CreditQ_CorrOuter		3	8	0.33
+Calib_CreditQ_CorrOuter		3	9	0.41
+Calib_CreditQ_CorrOuter		3	10	0.38
+Calib_CreditQ_CorrOuter		3	11	0.39
+Calib_CreditQ_CorrOuter		3	12	0.35
+Calib_CreditQ_CorrOuter		4	1	0.4
+Calib_CreditQ_CorrOuter		4	2	0.45
+Calib_CreditQ_CorrOuter		4	3	0.47
+Calib_CreditQ_CorrOuter		4	5	0.49
+Calib_CreditQ_CorrOuter		4	6	0.47
+Calib_CreditQ_CorrOuter		4	7	0.33
+Calib_CreditQ_CorrOuter		4	8	0.34
+Calib_CreditQ_CorrOuter		4	9	0.41
+Calib_CreditQ_CorrOuter		4	10	0.4
+Calib_CreditQ_CorrOuter		4	11	0.39
+Calib_CreditQ_CorrOuter		4	12	0.34
+Calib_CreditQ_CorrOuter		5	1	0.4
+Calib_CreditQ_CorrOuter		5	2	0.45
+Calib_CreditQ_CorrOuter		5	3	0.48
+Calib_CreditQ_CorrOuter		5	4	0.49
+Calib_CreditQ_CorrOuter		5	6	0.48
+Calib_CreditQ_CorrOuter		5	7	0.33
+Calib_CreditQ_CorrOuter		5	8	0.34
+Calib_CreditQ_CorrOuter		5	9	0.41
+Calib_CreditQ_CorrOuter		5	10	0.39
+Calib_CreditQ_CorrOuter		5	11	0.4
+Calib_CreditQ_CorrOuter		5	12	0.34
+Calib_CreditQ_CorrOuter		6	1	0.37
+Calib_CreditQ_CorrOuter		6	2	0.43
+Calib_CreditQ_CorrOuter		6	3	0.45
+Calib_CreditQ_CorrOuter		6	4	0.47
+Calib_CreditQ_CorrOuter		6	5	0.48
+Calib_CreditQ_CorrOuter		6	7	0.31
+Calib_CreditQ_CorrOuter		6	8	0.32
+Calib_CreditQ_CorrOuter		6	9	0.38
+Calib_CreditQ_CorrOuter		6	10	0.36
+Calib_CreditQ_CorrOuter		6	11	0.37
+Calib_CreditQ_CorrOuter		6	12	0.32
+Calib_CreditQ_CorrOuter		7	1	0.39
+Calib_CreditQ_CorrOuter		7	2	0.32
+Calib_CreditQ_CorrOuter		7	3	0.33
+Calib_CreditQ_CorrOuter		7	4	0.33
+Calib_CreditQ_CorrOuter		7	5	0.33
+Calib_CreditQ_CorrOuter		7	6	0.31
+Calib_CreditQ_CorrOuter		7	8	0.26
+Calib_CreditQ_CorrOuter		7	9	0.31
+Calib_CreditQ_CorrOuter		7	10	0.28
+Calib_CreditQ_CorrOuter		7	11	0.27
+Calib_CreditQ_CorrOuter		7	12	0.25
+Calib_CreditQ_CorrOuter		8	1	0.32
+Calib_CreditQ_CorrOuter		8	2	0.34
+Calib_CreditQ_CorrOuter		8	3	0.33
+Calib_CreditQ_CorrOuter		8	4	0.34
+Calib_CreditQ_CorrOuter		8	5	0.34
+Calib_CreditQ_CorrOuter		8	6	0.32
+Calib_CreditQ_CorrOuter		8	7	0.26
+Calib_CreditQ_CorrOuter		8	9	0.31
+Calib_CreditQ_CorrOuter		8	10	0.28
+Calib_CreditQ_CorrOuter		8	11	0.28
+Calib_CreditQ_CorrOuter		8	12	0.25
+Calib_CreditQ_CorrOuter		9	1	0.35
+Calib_CreditQ_CorrOuter		9	2	0.39
+Calib_CreditQ_CorrOuter		9	3	0.41
+Calib_CreditQ_CorrOuter		9	4	0.41
+Calib_CreditQ_CorrOuter		9	5	0.41
+Calib_CreditQ_CorrOuter		9	6	0.38
+Calib_CreditQ_CorrOuter		9	7	0.31
+Calib_CreditQ_CorrOuter		9	8	0.31
+Calib_CreditQ_CorrOuter		9	10	0.35
+Calib_CreditQ_CorrOuter		9	11	0.34
+Calib_CreditQ_CorrOuter		9	12	0.32
+Calib_CreditQ_CorrOuter		10	1	0.33
+Calib_CreditQ_CorrOuter		10	2	0.36
+Calib_CreditQ_CorrOuter		10	3	0.38
+Calib_CreditQ_CorrOuter		10	4	0.4
+Calib_CreditQ_CorrOuter		10	5	0.39
+Calib_CreditQ_CorrOuter		10	6	0.36
+Calib_CreditQ_CorrOuter		10	7	0.28
+Calib_CreditQ_CorrOuter		10	8	0.28
+Calib_CreditQ_CorrOuter		10	9	0.35
+Calib_CreditQ_CorrOuter		10	11	0.34
+Calib_CreditQ_CorrOuter		10	12	0.29
+Calib_CreditQ_CorrOuter		11	1	0.33
+Calib_CreditQ_CorrOuter		11	2	0.36
+Calib_CreditQ_CorrOuter		11	3	0.39
+Calib_CreditQ_CorrOuter		11	4	0.39
+Calib_CreditQ_CorrOuter		11	5	0.4
+Calib_CreditQ_CorrOuter		11	6	0.37
+Calib_CreditQ_CorrOuter		11	7	0.27
+Calib_CreditQ_CorrOuter		11	8	0.28
+Calib_CreditQ_CorrOuter		11	9	0.34
+Calib_CreditQ_CorrOuter		11	10	0.34
+Calib_CreditQ_CorrOuter		11	12	0.3
+Calib_CreditQ_CorrOuter		12	1	0.3
+Calib_CreditQ_CorrOuter		12	2	0.31
+Calib_CreditQ_CorrOuter		12	3	0.35
+Calib_CreditQ_CorrOuter		12	4	0.34
+Calib_CreditQ_CorrOuter		12	5	0.34
+Calib_CreditQ_CorrOuter		12	6	0.32
+Calib_CreditQ_CorrOuter		12	7	0.25
+Calib_CreditQ_CorrOuter		12	8	0.25
+Calib_CreditQ_CorrOuter		12	9	0.32
+Calib_CreditQ_CorrOuter		12	10	0.29
+Calib_CreditQ_CorrOuter		12	11	0.3
+Calib_CreditNonQ_Weight	1			240
+Calib_CreditNonQ_Weight	2			1000
+Calib_CreditNonQ_Weight	Residual			1000
+Calib_CreditVolNonQ_Weight				0.46
+Calib_CreditNonQ_Corr		Aggregate	Same	0.77
+Calib_CreditNonQ_Corr		Aggregate	Different	0.47
+Calib_CreditNonQ_Corr		Residual	Same	0.5
+Calib_CreditNonQ_Corr		Residual	Different	0.5
+Calib_CreditNonQ_CorrOuter				0.69
+Calib_Equity_Weight	1			23
+Calib_Equity_Weight	2			25
+Calib_Equity_Weight	3			29
+Calib_Equity_Weight	4			26
+Calib_Equity_Weight	5			20
+Calib_Equity_Weight	6			21
+Calib_Equity_Weight	7			24
+Calib_Equity_Weight	8			24
+Calib_Equity_Weight	9			29
+Calib_Equity_Weight	10			28
+Calib_Equity_Weight	11			15
+Calib_Equity_Weight	12			15
+Calib_Equity_Weight	Residual			29
+Calib_EquityVol_HVR				0.6
+Calib_EquityVol_Weight	1			0.26
+Calib_EquityVol_Weight	2			0.26
+Calib_EquityVol_Weight	3			0.26
+Calib_EquityVol_Weight	4			0.26
+Calib_EquityVol_Weight	5			0.26
+Calib_EquityVol_Weight	6			0.26
+Calib_EquityVol_Weight	7			0.26
+Calib_EquityVol_Weight	8			0.26
+Calib_EquityVol_Weight	9			0.26
+Calib_EquityVol_Weight	10			0.26
+Calib_EquityVol_Weight	11			0.26
+Calib_EquityVol_Weight	12			0.67
+Calib_EquityVol_Weight	Residual			0.26
+Calib_Equity_Corr	1			0.14
+Calib_Equity_Corr	2			0.2
+Calib_Equity_Corr	3			0.28
+Calib_Equity_Corr	4			0.23
+Calib_Equity_Corr	5			0.18
+Calib_Equity_Corr	6			0.29
+Calib_Equity_Corr	7			0.34
+Calib_Equity_Corr	8			0.3
+Calib_Equity_Corr	9			0.19
+Calib_Equity_Corr	10			0.17
+Calib_Equity_Corr	11			0.41
+Calib_Equity_Corr	12			0.41
+Calib_Equity_Corr	Residual			0
+Calib_Equity_CorrOuter		1	2	0.17
+Calib_Equity_CorrOuter		1	3	0.18
+Calib_Equity_CorrOuter		1	4	0.17
+Calib_Equity_CorrOuter		1	5	0.11
+Calib_Equity_CorrOuter		1	6	0.15
+Calib_Equity_CorrOuter		1	7	0.15
+Calib_Equity_CorrOuter		1	8	0.15
+Calib_Equity_CorrOuter		1	9	0.15
+Calib_Equity_CorrOuter		1	10	0.11
+Calib_Equity_CorrOuter		1	11	0.19
+Calib_Equity_CorrOuter		1	12	0.19
+Calib_Equity_CorrOuter		2	1	0.17
+Calib_Equity_CorrOuter		2	3	0.23
+Calib_Equity_CorrOuter		2	4	0.21
+Calib_Equity_CorrOuter		2	5	0.13
+Calib_Equity_CorrOuter		2	6	0.17
+Calib_Equity_CorrOuter		2	7	0.18
+Calib_Equity_CorrOuter		2	8	0.17
+Calib_Equity_CorrOuter		2	9	0.19
+Calib_Equity_CorrOuter		2	10	0.13
+Calib_Equity_CorrOuter		2	11	0.22
+Calib_Equity_CorrOuter		2	12	0.22
+Calib_Equity_CorrOuter		3	1	0.18
+Calib_Equity_CorrOuter		3	2	0.23
+Calib_Equity_CorrOuter		3	4	0.24
+Calib_Equity_CorrOuter		3	5	0.14
+Calib_Equity_CorrOuter		3	6	0.19
+Calib_Equity_CorrOuter		3	7	0.22
+Calib_Equity_CorrOuter		3	8	0.19
+Calib_Equity_CorrOuter		3	9	0.2
+Calib_Equity_CorrOuter		3	10	0.15
+Calib_Equity_CorrOuter		3	11	0.25
+Calib_Equity_CorrOuter		3	12	0.25
+Calib_Equity_CorrOuter		4	1	0.17
+Calib_Equity_CorrOuter		4	2	0.21
+Calib_Equity_CorrOuter		4	3	0.24
+Calib_Equity_CorrOuter		4	5	0.14
+Calib_Equity_CorrOuter		4	6	0.19
+Calib_Equity_CorrOuter		4	7	0.2
+Calib_Equity_CorrOuter		4	8	0.19
+Calib_Equity_CorrOuter		4	9	0.2
+Calib_Equity_CorrOuter		4	10	0.15
+Calib_Equity_CorrOuter		4	11	0.24
+Calib_Equity_CorrOuter		4	12	0.24
+Calib_Equity_CorrOuter		5	1	0.11
+Calib_Equity_CorrOuter		5	2	0.13
+Calib_Equity_CorrOuter		5	3	0.14
+Calib_Equity_CorrOuter		5	4	0.14
+Calib_Equity_CorrOuter		5	6	0.22
+Calib_Equity_CorrOuter		5	7	0.21
+Calib_Equity_CorrOuter		5	8	0.22
+Calib_Equity_CorrOuter		5	9	0.13
+Calib_Equity_CorrOuter		5	10	0.16
+Calib_Equity_CorrOuter		5	11	0.24
+Calib_Equity_CorrOuter		5	12	0.24
+Calib_Equity_CorrOuter		6	1	0.15
+Calib_Equity_CorrOuter		6	2	0.17
+Calib_Equity_CorrOuter		6	3	0.19
+Calib_Equity_CorrOuter		6	4	0.19
+Calib_Equity_CorrOuter		6	5	0.22
+Calib_Equity_CorrOuter		6	7	0.29
+Calib_Equity_CorrOuter		6	8	0.29
+Calib_Equity_CorrOuter		6	9	0.17
+Calib_Equity_CorrOuter		6	10	0.21
+Calib_Equity_CorrOuter		6	11	0.32
+Calib_Equity_CorrOuter		6	12	0.32
+Calib_Equity_CorrOuter		7	1	0.15
+Calib_Equity_CorrOuter		7	2	0.18
+Calib_Equity_CorrOuter		7	3	0.22
+Calib_Equity_CorrOuter		7	4	0.2
+Calib_Equity_CorrOuter		7	5	0.21
+Calib_Equity_CorrOuter		7	6	0.29
+Calib_Equity_CorrOuter		7	8	0.28
+Calib_Equity_CorrOuter		7	9	0.17
+Calib_Equity_CorrOuter		7	10	0.21
+Calib_Equity_CorrOuter		7	11	0.34
+Calib_Equity_CorrOuter		7	12	0.34
+Calib_Equity_CorrOuter		8	1	0.15
+Calib_Equity_CorrOuter		8	2	0.17
+Calib_Equity_CorrOuter		8	3	0.19
+Calib_Equity_CorrOuter		8	4	0.19
+Calib_Equity_CorrOuter		8	5	0.22
+Calib_Equity_CorrOuter		8	6	0.29
+Calib_Equity_CorrOuter		8	7	0.28
+Calib_Equity_CorrOuter		8	9	0.17
+Calib_Equity_CorrOuter		8	10	0.21
+Calib_Equity_CorrOuter		8	11	0.33
+Calib_Equity_CorrOuter		8	12	0.33
+Calib_Equity_CorrOuter		9	1	0.15
+Calib_Equity_CorrOuter		9	2	0.19
+Calib_Equity_CorrOuter		9	3	0.2
+Calib_Equity_CorrOuter		9	4	0.2
+Calib_Equity_CorrOuter		9	5	0.13
+Calib_Equity_CorrOuter		9	6	0.17
+Calib_Equity_CorrOuter		9	7	0.17
+Calib_Equity_CorrOuter		9	8	0.17
+Calib_Equity_CorrOuter		9	10	0.13
+Calib_Equity_CorrOuter		9	11	0.21
+Calib_Equity_CorrOuter		9	12	0.21
+Calib_Equity_CorrOuter		10	1	0.11
+Calib_Equity_CorrOuter		10	2	0.13
+Calib_Equity_CorrOuter		10	3	0.15
+Calib_Equity_CorrOuter		10	4	0.15
+Calib_Equity_CorrOuter		10	5	0.16
+Calib_Equity_CorrOuter		10	6	0.21
+Calib_Equity_CorrOuter		10	7	0.21
+Calib_Equity_CorrOuter		10	8	0.21
+Calib_Equity_CorrOuter		10	9	0.13
+Calib_Equity_CorrOuter		10	11	0.22
+Calib_Equity_CorrOuter		10	12	0.22
+Calib_Equity_CorrOuter		11	1	0.19
+Calib_Equity_CorrOuter		11	2	0.22
+Calib_Equity_CorrOuter		11	3	0.25
+Calib_Equity_CorrOuter		11	4	0.24
+Calib_Equity_CorrOuter		11	5	0.24
+Calib_Equity_CorrOuter		11	6	0.32
+Calib_Equity_CorrOuter		11	7	0.34
+Calib_Equity_CorrOuter		11	8	0.33
+Calib_Equity_CorrOuter		11	9	0.21
+Calib_Equity_CorrOuter		11	10	0.22
+Calib_Equity_CorrOuter		11	12	0.41
+Calib_Equity_CorrOuter		12	1	0.19
+Calib_Equity_CorrOuter		12	2	0.22
+Calib_Equity_CorrOuter		12	3	0.25
+Calib_Equity_CorrOuter		12	4	0.24
+Calib_Equity_CorrOuter		12	5	0.24
+Calib_Equity_CorrOuter		12	6	0.32
+Calib_Equity_CorrOuter		12	7	0.34
+Calib_Equity_CorrOuter		12	8	0.33
+Calib_Equity_CorrOuter		12	9	0.21
+Calib_Equity_CorrOuter		12	10	0.22
+Calib_Equity_CorrOuter		12	11	0.41
+Calib_Commodity_Weight	1			16
+Calib_Commodity_Weight	2			20
+Calib_Commodity_Weight	3			23
+Calib_Commodity_Weight	4			18
+Calib_Commodity_Weight	5			28
+Calib_Commodity_Weight	6			18
+Calib_Commodity_Weight	7			17
+Calib_Commodity_Weight	8			57
+Calib_Commodity_Weight	9			21
+Calib_Commodity_Weight	10			39
+Calib_Commodity_Weight	11			20
+Calib_Commodity_Weight	12			20
+Calib_Commodity_Weight	13			15
+Calib_Commodity_Weight	14			15
+Calib_Commodity_Weight	15			11
+Calib_Commodity_Weight	16			57
+Calib_Commodity_Weight	17			16
+Calib_CommodityVol_HVR				0.75
+Calib_CommodityVol_Weight				0.41
+Calib_Commodity_Corr	1			0.16
+Calib_Commodity_Corr	2			0.98
+Calib_Commodity_Corr	3			0.77
+Calib_Commodity_Corr	4			0.82
+Calib_Commodity_Corr	5			0.98
+Calib_Commodity_Corr	6			0.89
+Calib_Commodity_Corr	7			0.96
+Calib_Commodity_Corr	8			0.48
+Calib_Commodity_Corr	9			0.64
+Calib_Commodity_Corr	10			0.39
+Calib_Commodity_Corr	11			0.45
+Calib_Commodity_Corr	12			0.53
+Calib_Commodity_Corr	13			0.65
+Calib_Commodity_Corr	14			0.12
+Calib_Commodity_Corr	15			0.21
+Calib_Commodity_Corr	16			0
+Calib_Commodity_Corr	17			0.35
+Calib_Commodity_CorrOuter		1	2	0.15
+Calib_Commodity_CorrOuter		1	3	0.15
+Calib_Commodity_CorrOuter		1	4	0.21
+Calib_Commodity_CorrOuter		1	5	0.16
+Calib_Commodity_CorrOuter		1	6	0.03
+Calib_Commodity_CorrOuter		1	7	0.11
+Calib_Commodity_CorrOuter		1	8	0.02
+Calib_Commodity_CorrOuter		1	9	0.12
+Calib_Commodity_CorrOuter		1	10	0.15
+Calib_Commodity_CorrOuter		1	11	0.15
+Calib_Commodity_CorrOuter		1	12	0.06
+Calib_Commodity_CorrOuter		1	13	0.0
+Calib_Commodity_CorrOuter		1	14	0.04
+Calib_Commodity_CorrOuter		1	15	0.06
+Calib_Commodity_CorrOuter		1	16	0
+Calib_Commodity_CorrOuter		1	17	0.11
+Calib_Commodity_CorrOuter		2	1	0.15
+Calib_Commodity_CorrOuter		2	3	0.74
+Calib_Commodity_CorrOuter		2	4	0.92
+Calib_Commodity_CorrOuter		2	5	0.89
+Calib_Commodity_CorrOuter		2	6	0.34
+Calib_Commodity_CorrOuter		2	7	0.23
+Calib_Commodity_CorrOuter		2	8	0.16
+Calib_Commodity_CorrOuter		2	9	0.22
+Calib_Commodity_CorrOuter		2	10	0.26
+Calib_Commodity_CorrOuter		2	11	0.31
+Calib_Commodity_CorrOuter		2	12	0.32
+Calib_Commodity_CorrOuter		2	13	0.22
+Calib_Commodity_CorrOuter		2	14	0.25
+Calib_Commodity_CorrOuter		2	15	0.19
+Calib_Commodity_CorrOuter		2	16	0
+Calib_Commodity_CorrOuter		2	17	0.57
+Calib_Commodity_CorrOuter		3	1	0.15
+Calib_Commodity_CorrOuter		3	2	0.74
+Calib_Commodity_CorrOuter		3	4	0.73
+Calib_Commodity_CorrOuter		3	5	0.69
+Calib_Commodity_CorrOuter		3	6	0.15
+Calib_Commodity_CorrOuter		3	7	0.22
+Calib_Commodity_CorrOuter		3	8	0.08
+Calib_Commodity_CorrOuter		3	9	0.14
+Calib_Commodity_CorrOuter		3	10	0.16
+Calib_Commodity_CorrOuter		3	11	0.21
+Calib_Commodity_CorrOuter		3	12	0.15
+Calib_Commodity_CorrOuter		3	13	-0.03
+Calib_Commodity_CorrOuter		3	14	0.16
+Calib_Commodity_CorrOuter		3	15	0.14
+Calib_Commodity_CorrOuter		3	16	0
+Calib_Commodity_CorrOuter		3	17	0.42
+Calib_Commodity_CorrOuter		4	1	0.21
+Calib_Commodity_CorrOuter		4	2	0.92
+Calib_Commodity_CorrOuter		4	3	0.73
+Calib_Commodity_CorrOuter		4	5	0.83
+Calib_Commodity_CorrOuter		4	6	0.3
+Calib_Commodity_CorrOuter		4	7	0.26
+Calib_Commodity_CorrOuter		4	8	0.07
+Calib_Commodity_CorrOuter		4	9	0.19
+Calib_Commodity_CorrOuter		4	10	0.22
+Calib_Commodity_CorrOuter		4	11	0.28
+Calib_Commodity_CorrOuter		4	12	0.31
+Calib_Commodity_CorrOuter		4	13	0.13
+Calib_Commodity_CorrOuter		4	14	0.22
+Calib_Commodity_CorrOuter		4	15	0.11
+Calib_Commodity_CorrOuter		4	16	0
+Calib_Commodity_CorrOuter		4	17	0.48
+Calib_Commodity_CorrOuter		5	1	0.16
+Calib_Commodity_CorrOuter		5	2	0.89
+Calib_Commodity_CorrOuter		5	3	0.69
+Calib_Commodity_CorrOuter		5	4	0.83
+Calib_Commodity_CorrOuter		5	6	0.12
+Calib_Commodity_CorrOuter		5	7	0.14
+Calib_Commodity_CorrOuter		5	8	0.0
+Calib_Commodity_CorrOuter		5	9	0.06
+Calib_Commodity_CorrOuter		5	10	0.1
+Calib_Commodity_CorrOuter		5	11	0.24
+Calib_Commodity_CorrOuter		5	12	0.2
+Calib_Commodity_CorrOuter		5	13	0.06
+Calib_Commodity_CorrOuter		5	14	0.2
+Calib_Commodity_CorrOuter		5	15	0.09
+Calib_Commodity_CorrOuter		5	16	0
+Calib_Commodity_CorrOuter		5	17	0.49
+Calib_Commodity_CorrOuter		6	1	0.03
+Calib_Commodity_CorrOuter		6	2	0.34
+Calib_Commodity_CorrOuter		6	3	0.15
+Calib_Commodity_CorrOuter		6	4	0.3
+Calib_Commodity_CorrOuter		6	5	0.12
+Calib_Commodity_CorrOuter		6	7	0.25
+Calib_Commodity_CorrOuter		6	8	0.58
+Calib_Commodity_CorrOuter		6	9	0.21
+Calib_Commodity_CorrOuter		6	10	0.14
+Calib_Commodity_CorrOuter		6	11	0.23
+Calib_Commodity_CorrOuter		6	12	0.15
+Calib_Commodity_CorrOuter		6	13	0.25
+Calib_Commodity_CorrOuter		6	14	0.15
+Calib_Commodity_CorrOuter		6	15	0.12
+Calib_Commodity_CorrOuter		6	16	0
+Calib_Commodity_CorrOuter		6	17	0.37
+Calib_Commodity_CorrOuter		7	1	0.11
+Calib_Commodity_CorrOuter		7	2	0.23
+Calib_Commodity_CorrOuter		7	3	0.22
+Calib_Commodity_CorrOuter		7	4	0.26
+Calib_Commodity_CorrOuter		7	5	0.14
+Calib_Commodity_CorrOuter		7	6	0.25
+Calib_Commodity_CorrOuter		7	8	0.19
+Calib_Commodity_CorrOuter		7	9	0.64
+Calib_Commodity_CorrOuter		7	10	0.19
+Calib_Commodity_CorrOuter		7	11	0.03
+Calib_Commodity_CorrOuter		7	12	-0.03
+Calib_Commodity_CorrOuter		7	13	0.04
+Calib_Commodity_CorrOuter		7	14	0.05
+Calib_Commodity_CorrOuter		7	15	0.06
+Calib_Commodity_CorrOuter		7	16	0
+Calib_Commodity_CorrOuter		7	17	0.17
+Calib_Commodity_CorrOuter		8	1	0.02
+Calib_Commodity_CorrOuter		8	2	0.16
+Calib_Commodity_CorrOuter		8	3	0.08
+Calib_Commodity_CorrOuter		8	4	0.07
+Calib_Commodity_CorrOuter		8	5	0.0
+Calib_Commodity_CorrOuter		8	6	0.58
+Calib_Commodity_CorrOuter		8	7	0.19
+Calib_Commodity_CorrOuter		8	9	0.17
+Calib_Commodity_CorrOuter		8	10	-0.01
+Calib_Commodity_CorrOuter		8	11	0.08
+Calib_Commodity_CorrOuter		8	12	0.01
+Calib_Commodity_CorrOuter		8	13	0.11
+Calib_Commodity_CorrOuter		8	14	0.08
+Calib_Commodity_CorrOuter		8	15	0.08
+Calib_Commodity_CorrOuter		8	16	0
+Calib_Commodity_CorrOuter		8	17	0.15
+Calib_Commodity_CorrOuter		9	1	0.12
+Calib_Commodity_CorrOuter		9	2	0.22
+Calib_Commodity_CorrOuter		9	3	0.14
+Calib_Commodity_CorrOuter		9	4	0.19
+Calib_Commodity_CorrOuter		9	5	0.06
+Calib_Commodity_CorrOuter		9	6	0.21
+Calib_Commodity_CorrOuter		9	7	0.64
+Calib_Commodity_CorrOuter		9	8	0.17
+Calib_Commodity_CorrOuter		9	10	0.1
+Calib_Commodity_CorrOuter		9	11	0.05
+Calib_Commodity_CorrOuter		9	12	-0.04
+Calib_Commodity_CorrOuter		9	13	0.05
+Calib_Commodity_CorrOuter		9	14	0.03
+Calib_Commodity_CorrOuter		9	15	0.05
+Calib_Commodity_CorrOuter		9	16	0
+Calib_Commodity_CorrOuter		9	17	0.17
+Calib_Commodity_CorrOuter		10	1	0.15
+Calib_Commodity_CorrOuter		10	2	0.26
+Calib_Commodity_CorrOuter		10	3	0.16
+Calib_Commodity_CorrOuter		10	4	0.22
+Calib_Commodity_CorrOuter		10	5	0.1
+Calib_Commodity_CorrOuter		10	6	0.14
+Calib_Commodity_CorrOuter		10	7	0.19
+Calib_Commodity_CorrOuter		10	8	-0.01
+Calib_Commodity_CorrOuter		10	9	0.1
+Calib_Commodity_CorrOuter		10	11	0.12
+Calib_Commodity_CorrOuter		10	12	0.13
+Calib_Commodity_CorrOuter		10	13	0.12
+Calib_Commodity_CorrOuter		10	14	0.1
+Calib_Commodity_CorrOuter		10	15	0.12
+Calib_Commodity_CorrOuter		10	16	0
+Calib_Commodity_CorrOuter		10	17	0.17
+Calib_Commodity_CorrOuter		11	1	0.15
+Calib_Commodity_CorrOuter		11	2	0.31
+Calib_Commodity_CorrOuter		11	3	0.21
+Calib_Commodity_CorrOuter		11	4	0.28
+Calib_Commodity_CorrOuter		11	5	0.24
+Calib_Commodity_CorrOuter		11	6	0.23
+Calib_Commodity_CorrOuter		11	7	0.03
+Calib_Commodity_CorrOuter		11	8	0.08
+Calib_Commodity_CorrOuter		11	9	0.05
+Calib_Commodity_CorrOuter		11	10	0.12
+Calib_Commodity_CorrOuter		11	12	0.34
+Calib_Commodity_CorrOuter		11	13	0.23
+Calib_Commodity_CorrOuter		11	14	0.17
+Calib_Commodity_CorrOuter		11	15	0.14
+Calib_Commodity_CorrOuter		11	16	0
+Calib_Commodity_CorrOuter		11	17	0.3
+Calib_Commodity_CorrOuter		12	1	0.06
+Calib_Commodity_CorrOuter		12	2	0.32
+Calib_Commodity_CorrOuter		12	3	0.15
+Calib_Commodity_CorrOuter		12	4	0.31
+Calib_Commodity_CorrOuter		12	5	0.2
+Calib_Commodity_CorrOuter		12	6	0.15
+Calib_Commodity_CorrOuter		12	7	-0.03
+Calib_Commodity_CorrOuter		12	8	0.01
+Calib_Commodity_CorrOuter		12	9	-0.04
+Calib_Commodity_CorrOuter		12	10	0.13
+Calib_Commodity_CorrOuter		12	11	0.34
+Calib_Commodity_CorrOuter		12	13	0.15
+Calib_Commodity_CorrOuter		12	14	0.19
+Calib_Commodity_CorrOuter		12	15	0.11
+Calib_Commodity_CorrOuter		12	16	0
+Calib_Commodity_CorrOuter		12	17	0.27
+Calib_Commodity_CorrOuter		13	1	0.0
+Calib_Commodity_CorrOuter		13	2	0.22
+Calib_Commodity_CorrOuter		13	3	-0.03
+Calib_Commodity_CorrOuter		13	4	0.13
+Calib_Commodity_CorrOuter		13	5	0.06
+Calib_Commodity_CorrOuter		13	6	0.25
+Calib_Commodity_CorrOuter		13	7	0.04
+Calib_Commodity_CorrOuter		13	8	0.11
+Calib_Commodity_CorrOuter		13	9	0.05
+Calib_Commodity_CorrOuter		13	10	0.12
+Calib_Commodity_CorrOuter		13	11	0.23
+Calib_Commodity_CorrOuter		13	12	0.15
+Calib_Commodity_CorrOuter		13	14	0.26
+Calib_Commodity_CorrOuter		13	15	0.14
+Calib_Commodity_CorrOuter		13	16	0
+Calib_Commodity_CorrOuter		13	17	0.26
+Calib_Commodity_CorrOuter		14	1	0.04
+Calib_Commodity_CorrOuter		14	2	0.25
+Calib_Commodity_CorrOuter		14	3	0.16
+Calib_Commodity_CorrOuter		14	4	0.22
+Calib_Commodity_CorrOuter		14	5	0.2
+Calib_Commodity_CorrOuter		14	6	0.15
+Calib_Commodity_CorrOuter		14	7	0.05
+Calib_Commodity_CorrOuter		14	8	0.08
+Calib_Commodity_CorrOuter		14	9	0.03
+Calib_Commodity_CorrOuter		14	10	0.1
+Calib_Commodity_CorrOuter		14	11	0.17
+Calib_Commodity_CorrOuter		14	12	0.19
+Calib_Commodity_CorrOuter		14	13	0.26
+Calib_Commodity_CorrOuter		14	15	0.1
+Calib_Commodity_CorrOuter		14	16	0
+Calib_Commodity_CorrOuter		14	17	0.22
+Calib_Commodity_CorrOuter		15	1	0.06
+Calib_Commodity_CorrOuter		15	2	0.19
+Calib_Commodity_CorrOuter		15	3	0.14
+Calib_Commodity_CorrOuter		15	4	0.11
+Calib_Commodity_CorrOuter		15	5	0.09
+Calib_Commodity_CorrOuter		15	6	0.12
+Calib_Commodity_CorrOuter		15	7	0.06
+Calib_Commodity_CorrOuter		15	8	0.08
+Calib_Commodity_CorrOuter		15	9	0.05
+Calib_Commodity_CorrOuter		15	10	0.12
+Calib_Commodity_CorrOuter		15	11	0.14
+Calib_Commodity_CorrOuter		15	12	0.11
+Calib_Commodity_CorrOuter		15	13	0.14
+Calib_Commodity_CorrOuter		15	14	0.1
+Calib_Commodity_CorrOuter		15	16	0
+Calib_Commodity_CorrOuter		15	17	0.2
+Calib_Commodity_CorrOuter		16	1	0
+Calib_Commodity_CorrOuter		16	2	0
+Calib_Commodity_CorrOuter		16	3	0
+Calib_Commodity_CorrOuter		16	4	0
+Calib_Commodity_CorrOuter		16	5	0
+Calib_Commodity_CorrOuter		16	6	0
+Calib_Commodity_CorrOuter		16	7	0
+Calib_Commodity_CorrOuter		16	8	0
+Calib_Commodity_CorrOuter		16	9	0
+Calib_Commodity_CorrOuter		16	10	0
+Calib_Commodity_CorrOuter		16	11	0
+Calib_Commodity_CorrOuter		16	12	0
+Calib_Commodity_CorrOuter		16	13	0
+Calib_Commodity_CorrOuter		16	14	0
+Calib_Commodity_CorrOuter		16	15	0
+Calib_Commodity_CorrOuter		16	17	0
+Calib_Commodity_CorrOuter		17	1	0.11
+Calib_Commodity_CorrOuter		17	2	0.57
+Calib_Commodity_CorrOuter		17	3	0.42
+Calib_Commodity_CorrOuter		17	4	0.48
+Calib_Commodity_CorrOuter		17	5	0.49
+Calib_Commodity_CorrOuter		17	6	0.37
+Calib_Commodity_CorrOuter		17	7	0.17
+Calib_Commodity_CorrOuter		17	8	0.15
+Calib_Commodity_CorrOuter		17	9	0.17
+Calib_Commodity_CorrOuter		17	10	0.17
+Calib_Commodity_CorrOuter		17	11	0.3
+Calib_Commodity_CorrOuter		17	12	0.27
+Calib_Commodity_CorrOuter		17	13	0.26
+Calib_Commodity_CorrOuter		17	14	0.22
+Calib_Commodity_CorrOuter		17	15	0.2
+Calib_Commodity_CorrOuter		17	16	0
+Calib_FX_Weight		2	2	7.5
+Calib_FX_Weight		2	1	7.5
+Calib_FX_Weight		1	2	7.5
+Calib_FX_Weight		1	1	7.5
+Calib_FXVol_HVR				0.58
+Calib_FXVol_Weight				0.3
+Calib_FX_Corr	1	2	2	0.5
+Calib_FX_Corr	1	2	1	0.5
+Calib_FX_Corr	1	1	2	0.5
+Calib_FX_Corr	1	1	1	0.5
+Calib_FX_Corr	2	2	2	0.5
+Calib_FX_Corr	2	2	1	0.5
+Calib_FX_Corr	2	1	2	0.5
+Calib_FX_Corr	2	1	1	0.5
+Calib_FXVol_Corr				0.5
+Calib_RiskClass_Corr		IR	FX	0.18
+Calib_RiskClass_Corr		IR	Equity	0.31
+Calib_RiskClass_Corr		IR	CreditQ	0.29
+Calib_RiskClass_Corr		IR	CreditNonQ	0.28
+Calib_RiskClass_Corr		IR	Commodity	0.35
+Calib_RiskClass_Corr		FX	IR	0.18
+Calib_RiskClass_Corr		FX	Equity	0.3
+Calib_RiskClass_Corr		FX	CreditQ	0.35
+Calib_RiskClass_Corr		FX	CreditNonQ	0.18
+Calib_RiskClass_Corr		FX	Commodity	0.31
+Calib_RiskClass_Corr		Equity	IR	0.31
+Calib_RiskClass_Corr		Equity	FX	0.3
+Calib_RiskClass_Corr		Equity	CreditQ	0.61
+Calib_RiskClass_Corr		Equity	CreditNonQ	0.47
+Calib_RiskClass_Corr		Equity	Commodity	0.47
+Calib_RiskClass_Corr		CreditQ	IR	0.29
+Calib_RiskClass_Corr		CreditQ	FX	0.35
+Calib_RiskClass_Corr		CreditQ	Equity	0.61
+Calib_RiskClass_Corr		CreditQ	CreditNonQ	0.51
+Calib_RiskClass_Corr		CreditQ	Commodity	0.43
+Calib_RiskClass_Corr		CreditNonQ	IR	0.28
+Calib_RiskClass_Corr		CreditNonQ	FX	0.18
+Calib_RiskClass_Corr		CreditNonQ	Equity	0.47
+Calib_RiskClass_Corr		CreditNonQ	CreditQ	0.51
+Calib_RiskClass_Corr		CreditNonQ	Commodity	0.34
+Calib_RiskClass_Corr		Commodity	IR	0.35
+Calib_RiskClass_Corr		Commodity	FX	0.31
+Calib_RiskClass_Corr		Commodity	Equity	0.47
+Calib_RiskClass_Corr		Commodity	CreditQ	0.43
+Calib_RiskClass_Corr		Commodity	CreditNonQ	0.34
+Info_IRCurve_CurrencyList	1			USD
+Info_IRCurve_CurrencyList	1			EUR
+Info_IRCurve_CurrencyList	1			GBP
+Info_IRCurve_CurrencyList	1			AUD
+Info_IRCurve_CurrencyList	1			CAD
+Info_IRCurve_CurrencyList	1			CHF
+Info_IRCurve_CurrencyList	1			DKK
+Info_IRCurve_CurrencyList	1			HKD
+Info_IRCurve_CurrencyList	1			KRW
+Info_IRCurve_CurrencyList	1			NOK
+Info_IRCurve_CurrencyList	1			NZD
+Info_IRCurve_CurrencyList	1			SEK
+Info_IRCurve_CurrencyList	1			SGD
+Info_IRCurve_CurrencyList	1			TWD
+Info_IRCurve_CurrencyList	2			JPY
+Info_IRCurve_CurrencyList	3			Other
+Info_FX_CurrencyList	2			Other
+Calib_IRCurve_Conc	1			31
+Calib_IRCurve_Conc	2			220
+Calib_IRCurve_Conc	3			41
+Calib_IRCurve_Conc	4			99
+Calib_CreditQ_Conc	1			0.95
+Calib_CreditQ_Conc	2			0.18
+Calib_CreditQ_Conc	3			0.18
+Calib_CreditQ_Conc	4			0.18
+Calib_CreditQ_Conc	5			0.18
+Calib_CreditQ_Conc	6			0.18
+Calib_CreditQ_Conc	7			0.95
+Calib_CreditQ_Conc	8			0.18
+Calib_CreditQ_Conc	9			0.18
+Calib_CreditQ_Conc	10			0.18
+Calib_CreditQ_Conc	11			0.18
+Calib_CreditQ_Conc	12			0.18
+Calib_CreditQ_Conc	Residual			0.18
+Calib_CreditNonQ_Conc	1			9.5
+Calib_CreditNonQ_Conc	2			0.5
+Calib_CreditNonQ_Conc	Residual			0.5
+Calib_Equity_Conc	1			7.3
+Calib_Equity_Conc	2			7.3
+Calib_Equity_Conc	3			7.3
+Calib_Equity_Conc	4			7.3
+Calib_Equity_Conc	5			30
+Calib_Equity_Conc	6			30
+Calib_Equity_Conc	7			30
+Calib_Equity_Conc	8			30
+Calib_Equity_Conc	9			2.4
+Calib_Equity_Conc	10			2.4
+Calib_Equity_Conc	11			1400
+Calib_Equity_Conc	12			1400
+Calib_Equity_Conc	Residual			2.4
+Calib_Commodity_Conc	1			310
+Calib_Commodity_Conc	2			1700
+Calib_Commodity_Conc	3			1300
+Calib_Commodity_Conc	4			1300
+Calib_Commodity_Conc	5			1300
+Calib_Commodity_Conc	6			2800
+Calib_Commodity_Conc	7			2800
+Calib_Commodity_Conc	8			2200
+Calib_Commodity_Conc	9			2200
+Calib_Commodity_Conc	10			52
+Calib_Commodity_Conc	11			490
+Calib_Commodity_Conc	12			1300
+Calib_Commodity_Conc	13			73
+Calib_Commodity_Conc	14			73
+Calib_Commodity_Conc	15			73
+Calib_Commodity_Conc	16			52
+Calib_Commodity_Conc	17			4000
+Calib_FX_Conc	1			8900
+Calib_FX_Conc	2			2000
+Calib_FX_Conc	3			250
+Calib_IRVol_Conc	1			93
+Calib_IRVol_Conc	2			2400
+Calib_IRVol_Conc	3			240
+Calib_IRVol_Conc	4			740
+Calib_CreditVol_Conc				240
+Calib_CreditVolNonQ_Conc				56
+Calib_EquityVol_Conc	1			140
+Calib_EquityVol_Conc	2			140
+Calib_EquityVol_Conc	3			140
+Calib_EquityVol_Conc	4			140
+Calib_EquityVol_Conc	5			1600
+Calib_EquityVol_Conc	6			1600
+Calib_EquityVol_Conc	7			1600
+Calib_EquityVol_Conc	8			1600
+Calib_EquityVol_Conc	9			38
+Calib_EquityVol_Conc	10			240
+Calib_EquityVol_Conc	11			9800
+Calib_EquityVol_Conc	12			9800
+Calib_EquityVol_Conc	Residual			38
+Calib_CommodityVol_Conc	1			130
+Calib_CommodityVol_Conc	2			1700
+Calib_CommodityVol_Conc	3			290
+Calib_CommodityVol_Conc	4			290
+Calib_CommodityVol_Conc	5			290
+Calib_CommodityVol_Conc	6			2300
+Calib_CommodityVol_Conc	7			2300
+Calib_CommodityVol_Conc	8			800
+Calib_CommodityVol_Conc	9			800
+Calib_CommodityVol_Conc	10			74
+Calib_CommodityVol_Conc	11			420
+Calib_CommodityVol_Conc	12			700
+Calib_CommodityVol_Conc	13			560
+Calib_CommodityVol_Conc	14			560
+Calib_CommodityVol_Conc	15			560
+Calib_CommodityVol_Conc	16			74
+Calib_CommodityVol_Conc	17			300
+Calib_FXVol_Conc		1	1	3900
+Calib_FXVol_Conc		1	2	1400
+Calib_FXVol_Conc		1	3	640
+Calib_FXVol_Conc		2	1	1400
+Calib_FXVol_Conc		2	2	690
+Calib_FXVol_Conc		2	3	440
+Calib_FXVol_Conc		3	1	640
+Calib_FXVol_Conc		3	2	440
+Calib_FXVol_Conc		3	3	280
+Info_IR_Conc_CurrencyList	1			Other
+Info_IR_Conc_CurrencyList	2			USD
+Info_IR_Conc_CurrencyList	2			EUR
+Info_IR_Conc_CurrencyList	2			GBP
+Info_IR_Conc_CurrencyList	3			AUD
+Info_IR_Conc_CurrencyList	3			CAD
+Info_IR_Conc_CurrencyList	3			CHF
+Info_IR_Conc_CurrencyList	3			DKK
+Info_IR_Conc_CurrencyList	3			HKD
+Info_IR_Conc_CurrencyList	3			KRW
+Info_IR_Conc_CurrencyList	3			NOK
+Info_IR_Conc_CurrencyList	3			NZD
+Info_IR_Conc_CurrencyList	3			SEK
+Info_IR_Conc_CurrencyList	3			SGD
+Info_IR_Conc_CurrencyList	3			TWD
+Info_IR_Conc_CurrencyList	4			JPY
+Info_FX_Conc_CurrencyList	1			USD
+Info_FX_Conc_CurrencyList	1			EUR
+Info_FX_Conc_CurrencyList	1			JPY
+Info_FX_Conc_CurrencyList	1			GBP
+Info_FX_Conc_CurrencyList	1			AUD
+Info_FX_Conc_CurrencyList	1			CHF
+Info_FX_Conc_CurrencyList	1			CAD
+Info_FX_Conc_CurrencyList	2			BRL
+Info_FX_Conc_CurrencyList	2			CNY
+Info_FX_Conc_CurrencyList	2			HKD
+Info_FX_Conc_CurrencyList	2			INR
+Info_FX_Conc_CurrencyList	2			KRW
+Info_FX_Conc_CurrencyList	2			MXN
+Info_FX_Conc_CurrencyList	2			NOK
+Info_FX_Conc_CurrencyList	2			NZD
+Info_FX_Conc_CurrencyList	2			RUB
+Info_FX_Conc_CurrencyList	2			SEK
+Info_FX_Conc_CurrencyList	2			SGD
+Info_FX_Conc_CurrencyList	2			TRY
+Info_FX_Conc_CurrencyList	2			ZAR
+Info_FX_Conc_CurrencyList	3			Other

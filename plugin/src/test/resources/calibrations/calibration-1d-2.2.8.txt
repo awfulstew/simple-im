@@ -1,0 +1,127 @@
+RiskType	Bucket	Label1	Label2	Parameter
+Info_SIMM_Version				2.2.8
+Info_MPOR				1
+Calib_IRCurve_Weight	1	2W		18
+Calib_IRCurve_Weight	1	1M		15
+Calib_IRCurve_Weight	1	3M		10
+Calib_IRCurve_Weight	1	6M		11
+Calib_IRCurve_Weight	1	1Y		13
+Calib_IRCurve_Weight	1	2Y		15
+Calib_IRCurve_Weight	1	3Y		16
+Calib_IRCurve_Weight	1	5Y		16
+Calib_IRCurve_Weight	1	10Y		16
+Calib_IRCurve_Weight	1	15Y		16
+Calib_IRCurve_Weight	1	20Y		16
+Calib_IRCurve_Weight	1	30Y		17
+Calib_IRCurve_Weight	2	2W		1.7
+Calib_IRCurve_Weight	2	1M		3.4
+Calib_Inflation_Weight				14
+Calib_XCcyBasis_Weight				5.4
+Calib_IRVol_Weight				0.042
+Calib_IRVol_HVR				0.53
+Calib_IRCurve_Corr		2W	1M	0.73
+Calib_IRCurve_Corr		30Y	2Y	0.7
+Calib_IRCurve_Corr		30Y	3Y	0.78
+Calib_IRCurve_Corr		30Y	5Y	0.87
+Calib_IRCurve_Corr		30Y	10Y	0.95
+Calib_IRCurve_Corr		30Y	15Y	0.98
+Calib_IRCurve_Corr		30Y	20Y	0.99
+Calib_IRSubCurve_Corr				0.986
+Calib_Inflation_Corr				0.42
+Calib_XCcyBasis_Corr				0.04
+Calib_IR_CorrOuter				0.2
+Calib_CreditQ_Weight	1			17
+Calib_CreditQ_Weight	2			22
+Calib_CreditQ_Weight	11			32
+Calib_CreditQ_Weight	12			35
+Calib_CreditQ_Weight	Residual			63
+Calib_CreditVol_Weight				0.091
+Calib_BaseCorr_Weight				2.6
+Calib_CreditQ_Corr		Aggregate	Same	0.94
+Calib_CreditQ_Corr		Aggregate	Different	0.42
+Calib_CreditQ_Corr		Residual	Same	0.5
+Calib_CreditQ_Corr		Residual	Different	0.5
+Calib_BaseCorr_Corr				0.18
+Calib_CreditQ_CorrOuter		1	2	0.39
+Calib_CreditQ_CorrOuter		12	10	0.29
+Calib_CreditQ_CorrOuter		12	11	0.3
+Calib_CreditNonQ_Weight	1			83
+Calib_CreditNonQ_Weight	2			220
+Calib_CreditNonQ_Weight	Residual			220
+Calib_CreditVolNonQ_Weight				0.091
+Calib_CreditNonQ_Corr		Aggregate	Same	0.77
+Calib_CreditNonQ_Corr		Aggregate	Different	0.47
+Calib_CreditNonQ_Corr		Residual	Same	0.5
+Calib_CreditNonQ_Corr		Residual	Different	0.5
+Calib_CreditNonQ_CorrOuter				0.69
+Calib_Equity_Weight	1			7.6
+Calib_Equity_Weight	2			8.1
+Calib_Equity_Weight	12			5.5
+Calib_Equity_Weight	Residual			9.4
+Calib_EquityVol_HVR				0.54
+Calib_EquityVol_Weight	1			0.065
+Calib_EquityVol_Weight	11			0.065
+Calib_EquityVol_Weight	12			0.22
+Calib_EquityVol_Weight	Residual			0.065
+Calib_Equity_Corr	1			0.14
+Calib_Equity_Corr	2			0.2
+Calib_Equity_Corr	12			0.41
+Calib_Equity_Corr	Residual			0
+Calib_Equity_CorrOuter		1	2	0.17
+Calib_Equity_CorrOuter		3	8	0.19
+Calib_Equity_CorrOuter		3	9	0.2
+Calib_Equity_CorrOuter		3	10	0.15
+Calib_Equity_CorrOuter		3	11	0.25
+Calib_Equity_CorrOuter		3	12	0.25
+Calib_Equity_CorrOuter		6	1	0.15
+Calib_Equity_CorrOuter		9	6	0.17
+Calib_Equity_CorrOuter		9	7	0.17
+Calib_Equity_CorrOuter		12	7	0.34
+Calib_Equity_CorrOuter		12	8	0.33
+Calib_Equity_CorrOuter		12	9	0.21
+Calib_Equity_CorrOuter		12	10	0.22
+Calib_Equity_CorrOuter		12	11	0.41
+Calib_Commodity_Weight	12			5.7
+Calib_Commodity_Weight	13			4.9
+Calib_Commodity_Weight	14			4.6
+Calib_Commodity_Weight	15			3.0
+Calib_CommodityVol_HVR				0.73
+Calib_CommodityVol_Weight				0.13
+Calib_Commodity_Corr	1			0.16
+Calib_Commodity_Corr	2			0.98
+Calib_Commodity_Corr	8			0.48
+Calib_Commodity_Corr	17			0.35
+Calib_Commodity_CorrOuter		17	11	0.3
+Calib_Commodity_CorrOuter		17	12	0.27
+Calib_Commodity_CorrOuter		17	14	0.22
+Calib_Commodity_CorrOuter		17	15	0.2
+Calib_Commodity_CorrOuter		17	16	0
+Calib_FX_Weight		2	2	1.8
+Calib_FX_Weight		2	1	1.8
+Calib_FX_Weight		1	2	1.8
+Calib_FX_Weight		1	1	1.8
+Calib_FXVol_HVR				0.76
+Calib_FXVol_Weight				0.077
+Calib_FX_Corr	1	2	2	0.5
+Calib_FX_Corr	1	2	1	0.5
+Calib_FX_Corr	1	1	2	0.5
+Calib_FX_Corr	1	1	1	0.5
+Calib_FX_Corr	2	2	2	0.5
+Calib_FX_Corr	2	2	1	0.5
+Calib_FX_Corr	2	1	2	0.5
+Calib_FX_Corr	2	1	1	0.5
+Calib_FXVol_Corr				0.5
+Calib_RiskClass_Corr		IR	FX	0.18
+Calib_RiskClass_Corr		IR	Equity	0.31
+Calib_RiskClass_Corr		Commodity	CreditNonQ	0.34
+Info_IRCurve_CurrencyList	1			USD
+Info_IRCurve_CurrencyList	1			EUR
+Info_IRCurve_CurrencyList	1			GBP
+Info_IRCurve_CurrencyList	1			AUD
+Info_IRCurve_CurrencyList	1			CAD
+Info_IRCurve_CurrencyList	1			CHF
+Info_IRCurve_CurrencyList	1			DKK
+Info_IRCurve_CurrencyList	1			TWD
+Info_IRCurve_CurrencyList	2			JPY
+Info_IRCurve_CurrencyList	3			Other
+Info_FX_CurrencyList	2			Other
