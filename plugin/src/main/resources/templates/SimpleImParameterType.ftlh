@@ -7,7 +7,7 @@
  */
 package ${modelPackage}.parameter;
 
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 
 @Generated(value="SimpleImParameterMojo", date="${buildTime?iso_utc}")
 public enum SimpleImParameterType {

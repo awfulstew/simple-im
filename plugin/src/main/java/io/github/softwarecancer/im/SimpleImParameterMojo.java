@@ -7,6 +7,7 @@ import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import freemarker.template.TemplateExceptionHandler;
+import org.apache.commons.io.filefilter.HiddenFileFilter;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugins.annotations.LifecyclePhase;
@@ -18,7 +19,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 @SuppressWarnings("ResultOfMethodCallIgnored")
-@Mojo(name = "calibrate", defaultPhase = LifecyclePhase.NONE)
+@Mojo(name = "calibrate", defaultPhase = LifecyclePhase.GENERATE_SOURCES)
 public class SimpleImParameterMojo extends AbstractMojo {
 
   // calibration file headers
@@ -90,7 +91,7 @@ public class SimpleImParameterMojo extends AbstractMojo {
       dataModel.put(MODEL_PACKAGE_FIELD, modelPackage);
 
       List<Map<String, Object>> fileModels = new ArrayList<>(); // run over files
-      for (File calibration: Objects.requireNonNull(calibrationDirectory.listFiles())) {
+      for (File calibration: Objects.requireNonNull(calibrationDirectory.listFiles((FileFilter) HiddenFileFilter.VISIBLE))) {
 
         getLog().info("Processing calibration file [" + calibration.getName() + "]");
         // lets set up the maps we will need
@@ -143,7 +144,7 @@ public class SimpleImParameterMojo extends AbstractMojo {
       getLog().info("  BUILD TEMPLATE CONTEXT FOR PROCESSING");
 
       Configuration config = new Configuration(Configuration.VERSION_2_3_30);
-      config.setDirectoryForTemplateLoading(new File("target/classes/templates"));
+      config.setClassForTemplateLoading(this.getClass(), "/templates");
       config.setDefaultEncoding(StandardCharsets.UTF_8.name());
       config.setTemplateExceptionHandler(TemplateExceptionHandler.RETHROW_HANDLER);
       config.setLogTemplateExceptions(false);
@@ -176,7 +177,7 @@ public class SimpleImParameterMojo extends AbstractMojo {
 
   private File setUpOutputLocations() {
     String fileSeparator = System.getProperty("file.separator");
-    String packageDirectoryName = modelPackage.replace(".", fileSeparator) + fileSeparator + "parameters";
+    String packageDirectoryName = modelPackage.replace(".", fileSeparator) + fileSeparator + "parameter";
     File packageUnderTarget = new File(relativeTargetJavaDir, packageDirectoryName);
     packageUnderTarget.mkdirs(); // should make everything on the way down
     return packageUnderTarget;

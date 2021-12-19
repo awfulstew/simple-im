@@ -63,7 +63,7 @@ fun calculateImModelScheduleMargin(crif: List<Crif>, config: CalculationConfig):
         config = config,
         group = group.key,
         crif = group.value,
-        margin = crif.map { it.getValue(config) }.reduceOrNull(BigDecimal::add)
+        margin = group.value.map { it.getValue(config) }.reduceOrNull(BigDecimal::add)
           ?: BigDecimal.ZERO,
         index = 3,
         type = "Trade",

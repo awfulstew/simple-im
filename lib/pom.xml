@@ -44,12 +44,51 @@
   <build>
     <sourceDirectory>${basedir}/src/main</sourceDirectory>
     <testSourceDirectory>${basedir}/src/test</testSourceDirectory>
+    <outputDirectory>${basedir}/target/classes</outputDirectory>
     <resources>
       <resource>
         <directory>${basedir}/src/resources</directory>
       </resource>
     </resources>
+
     <plugins>
+      <plugin>
+        <groupId>io.github.softwarecancer</groupId>
+        <artifactId>simple-im-maven-plugin</artifactId>
+        <version>${project.parent.version}</version>
+        <configuration>
+          <modelPackage>io.github.softwarecancer</modelPackage>
+          <calibrationDirectory>${project.basedir}/src/resources/calibrations</calibrationDirectory>
+          <relativeTargetJavaDir>${project.build.directory}/generated-sources/simple-im</relativeTargetJavaDir>
+          <pluginVersion>${project.parent.version}</pluginVersion>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>calibrate</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>1.9.1</version>
+        <executions>
+          <execution>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>add-source</goal>
+            </goals>
+            <configuration>
+              <sources>
+                <source>${project.build.directory}/generated-sources/simple-im</source>
+              </sources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-assembly-plugin</artifactId>
@@ -70,25 +109,6 @@
         </executions>
       </plugin>
 
-      <plugin>
-        <groupId>io.github.softwarecancer</groupId>
-        <artifactId>simple-im-maven-plugin</artifactId>
-        <version>${project.parent.version}</version>
-        <configuration>
-          <modelPackage>io.github.softwarecancer</modelPackage>
-          <calibrationDirectory>${basedir}/target/classes/calibrations</calibrationDirectory>
-          <relativeTargetJavaDir>${basedir}/target/generated-sources/simple-im</relativeTargetJavaDir>
-          <pluginVersion>${project.parent.version}</pluginVersion>
-        </configuration>
-        <executions>
-          <execution>
-            <phase>generate-sources</phase>
-            <goals>
-              <goal>calibrate</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
       <plugin>
         <groupId>org.jetbrains.kotlin</groupId>
         <artifactId>kotlin-maven-plugin</artifactId>

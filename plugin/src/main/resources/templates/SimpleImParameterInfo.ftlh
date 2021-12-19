@@ -8,7 +8,7 @@
 package ${modelPackage}.parameter;
 
 import java.util.Objects;
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 
 @Generated(value="SimpleImParameterMojo", date="${buildTime?iso_utc}")
 public class SimpleImParameterInfo {
@@ -37,7 +37,7 @@ public class SimpleImParameterInfo {
 
   @Override
   public boolean equals(Object other) {
-    if (!(other instanceof SimpleParameterInfo)) {
+    if (!(other instanceof SimpleImParameterInfo)) {
       return false;
     } else {
       SimpleImParameterInfo info = (SimpleImParameterInfo) other;

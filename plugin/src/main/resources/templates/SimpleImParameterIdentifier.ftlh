@@ -8,7 +8,7 @@
 package ${modelPackage}.parameter;
 
 import java.util.Objects;
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 
 @Generated(value="SimpleImParameterMojo", date="${buildTime?iso_utc}")
 public class SimpleImParameterIdentifier {

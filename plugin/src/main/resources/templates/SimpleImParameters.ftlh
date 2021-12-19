@@ -14,7 +14,7 @@ import ${modelPackage}.parameter.SimpleImParameterType;
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 
 @Generated(value="SimpleImParameterMojo", date="${buildTime?iso_utc}")
 public class SimpleImParameters {
@@ -34,16 +34,16 @@ public class SimpleImParameters {
   static {
     // add the default schedule (grid) parameter values
     Map<SimpleImParameterIdentifier, BigDecimal> SCHEDULE_DEFAULT_NULL = new HashMap<>();
-    SCHEDULE_DEFAULT_NULL.put(new SimpleImParameterIdentifier(SimpleImParameterType.WEIGHT, "credit", null, 1, null, null), CREDIT_UNDER_2_YEARS);
-    SCHEDULE_DEFAULT_NULL.put(new SimpleImParameterIdentifier(SimpleImParameterType.WEIGHT, "credit", null, 2, null, null), CREDIT_2_TO_5_YEARS);
-    SCHEDULE_DEFAULT_NULL.put(new SimpleImParameterIdentifier(SimpleImParameterType.WEIGHT, "credit", null, 3, null, null), CREDIT_OVER_5_YEARS);
-    SCHEDULE_DEFAULT_NULL.put(new SimpleImParameterIdentifier(SimpleImParameterType.WEIGHT, "commodity", null, 1, null, null), COMMODITY);
-    SCHEDULE_DEFAULT_NULL.put(new SimpleImParameterIdentifier(SimpleImParameterType.WEIGHT, "equity", null, 1, null, null), EQUITY);
-    SCHEDULE_DEFAULT_NULL.put(new SimpleImParameterIdentifier(SimpleImParameterType.WEIGHT, "fx", null, 1, null, null), FX);
-    SCHEDULE_DEFAULT_NULL.put(new SimpleImParameterIdentifier(SimpleImParameterType.WEIGHT, "rates", null, 1, null, null), RATES_UNDER_2_YEARS);
-    SCHEDULE_DEFAULT_NULL.put(new SimpleImParameterIdentifier(SimpleImParameterType.WEIGHT, "rates", null, 2, null, null), RATES_2_TO_5_YEARS);
-    SCHEDULE_DEFAULT_NULL.put(new SimpleImParameterIdentifier(SimpleImParameterType.WEIGHT, "rates", null, 3, null, null), RATES_OVER_5_YEARS);
-    SCHEDULE_DEFAULT_NULL.put(new SimpleImParameterIdentifier(SimpleImParameterType.WEIGHT, "other", null, 1, null, null), OTHER);
+    SCHEDULE_DEFAULT_NULL.put(new SimpleImParameterIdentifier(SimpleImParameterType.WEIGHT, "credit", null, "1", null, null), CREDIT_UNDER_2_YEARS);
+    SCHEDULE_DEFAULT_NULL.put(new SimpleImParameterIdentifier(SimpleImParameterType.WEIGHT, "credit", null, "2", null, null), CREDIT_2_TO_5_YEARS);
+    SCHEDULE_DEFAULT_NULL.put(new SimpleImParameterIdentifier(SimpleImParameterType.WEIGHT, "credit", null, "3", null, null), CREDIT_OVER_5_YEARS);
+    SCHEDULE_DEFAULT_NULL.put(new SimpleImParameterIdentifier(SimpleImParameterType.WEIGHT, "commodity", null, "1", null, null), COMMODITY);
+    SCHEDULE_DEFAULT_NULL.put(new SimpleImParameterIdentifier(SimpleImParameterType.WEIGHT, "equity", null, "1", null, null), EQUITY);
+    SCHEDULE_DEFAULT_NULL.put(new SimpleImParameterIdentifier(SimpleImParameterType.WEIGHT, "fx", null, "1", null, null), FX);
+    SCHEDULE_DEFAULT_NULL.put(new SimpleImParameterIdentifier(SimpleImParameterType.WEIGHT, "rates", null, "1", null, null), RATES_UNDER_2_YEARS);
+    SCHEDULE_DEFAULT_NULL.put(new SimpleImParameterIdentifier(SimpleImParameterType.WEIGHT, "rates", null, "2", null, null), RATES_2_TO_5_YEARS);
+    SCHEDULE_DEFAULT_NULL.put(new SimpleImParameterIdentifier(SimpleImParameterType.WEIGHT, "rates", null, "3", null, null), RATES_OVER_5_YEARS);
+    SCHEDULE_DEFAULT_NULL.put(new SimpleImParameterIdentifier(SimpleImParameterType.WEIGHT, "other", null, "1", null, null), OTHER);
     PARAMETERS.put(new SimpleImParameterInfo("schedule", "default", null), SCHEDULE_DEFAULT_NULL);
 
     <#list files as file>
@@ -62,7 +62,7 @@ public class SimpleImParameters {
   static {
     <#list files as file>
     // add the ${file.version!default} simm currency list for ${file.mpor!null} day margin period-of-risk
-    Map<SimpleImParameterIdentifier, BigDecimal> SIMM_${file.version?replace(".", "_")!DEFAULT}_MPOR${file.mpor?string!NULL} = new HashMap<>();
+    Map<SimpleImParameterIdentifier, String> SIMM_${file.version?replace(".", "_")!DEFAULT}_MPOR${file.mpor?string!NULL} = new HashMap<>();
     <#list file.currencies as currency>
     SIMM_${file.version?replace(".", "_")!DEFAULT}_MPOR${file.mpor?string!NULL}.put(new SimpleImParameterIdentifier(SimpleImParameterType.CURRENCY, null, "${currency.risk}", "${currency.bucket}", null, null), "${currency.value}");
     </#list>

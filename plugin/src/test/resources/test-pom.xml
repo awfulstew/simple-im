@@ -26,7 +26,7 @@
         <configuration>
           <modelPackage>io.github.softwarecancer</modelPackage>
           <calibrationDirectory>src/test/resources/calibrations</calibrationDirectory>
-          <relativeTargetJavaDir>target/generated-sources/test-simple-im</relativeTargetJavaDir>
+          <relativeTargetJavaDir>target/generated-test-sources/test-simple-im</relativeTargetJavaDir>
           <pluginVersion>2.3.0</pluginVersion>
         </configuration>
       </plugin>
