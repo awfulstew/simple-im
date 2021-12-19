@@ -74,7 +74,7 @@ class Regulation(_postRegulation: String, _collectRegulation: String) {
   }
 
   private fun fromString(regulation: String): Set<String> {
-    return regulation.toUpperCase()
+    return regulation.uppercase()
       .replace(bracketRegex, "$1")
       .replace(quoteRegex, "$1")
       .replace(spaceRegex, "")
@@ -98,7 +98,7 @@ class Regulation(_postRegulation: String, _collectRegulation: String) {
         // if we are checking with the all regulators string then accept
         regulator == ALL_REGULATORS_STRING -> true
         mode == Mode.BLANK -> regulator == BLANK_REGULATOR_STRING
-        mode == Mode.INCLUDED -> regulator.toUpperCase() == INCLUDED
+        mode == Mode.INCLUDED -> regulator.uppercase() == INCLUDED
         else -> it.equals(regulator, ignoreCase = true)
       }
     }

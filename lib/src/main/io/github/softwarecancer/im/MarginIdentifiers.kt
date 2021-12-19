@@ -34,81 +34,81 @@ enum class ImModel(override val identifier: String, val labels: List<String>): M
 }
 
 enum class ProductType(override val identifier: String, val label: String): MarginIdentifier {
-  SIMM_RATES_FX("RatesFx", "RatesFx".toUpperCase()),
-  SIMM_CREDIT("Credit", "Credit".toUpperCase()),
-  SIMM_EQUITY("Equity", "Equity".toUpperCase()),
-  SIMM_COMMODITY("Commodity", "Commodity".toUpperCase()),
-  SIMM_ADD_ON("AddOn", "AddOn".toUpperCase()),
-  SIMM_SINGLE("Single", "Single".toUpperCase()),
-  SCHEDULE_FX("FX", "FX".toUpperCase()),
-  SCHEDULE_RATES("Rates", "Rates".toUpperCase()),
-  SCHEDULE_CREDIT("Credit", "Credit".toUpperCase()),
-  SCHEDULE_EQUITY("Equity", "Equity".toUpperCase()),
-  SCHEDULE_COMMODITY("Commodity", "Commodity".toUpperCase());
+  SIMM_RATES_FX("RatesFx", "RatesFx".uppercase()),
+  SIMM_CREDIT("Credit", "Credit".uppercase()),
+  SIMM_EQUITY("Equity", "Equity".uppercase()),
+  SIMM_COMMODITY("Commodity", "Commodity".uppercase()),
+  SIMM_ADD_ON("AddOn", "AddOn".uppercase()),
+  SIMM_SINGLE("Single", "Single".uppercase()),
+  SCHEDULE_FX("FX", "FX".uppercase()),
+  SCHEDULE_RATES("Rates", "Rates".uppercase()),
+  SCHEDULE_CREDIT("Credit", "Credit".uppercase()),
+  SCHEDULE_EQUITY("Equity", "Equity".uppercase()),
+  SCHEDULE_COMMODITY("Commodity", "Commodity".uppercase());
 }
 
 enum class RiskType(override val identifier: String, val labels: List<String>): MarginIdentifier {
   SIMM_INTEREST_RATES("IR", listOf(
-    RiskType.SIMM_IR_CURVE_LABEL.toUpperCase(),
-    RiskType.SIMM_IR_VOL_LABEL.toUpperCase(),
-    RiskType.SIMM_INFLATION_LABEL.toUpperCase(),
-    RiskType.SIMM_INFLATION_VOL_LABEL.toUpperCase(),
-    RiskType.SIMM_XCCY_BASIS_LABEL.toUpperCase()
+    RiskType.SIMM_IR_CURVE_LABEL.uppercase(),
+    RiskType.SIMM_IR_VOL_LABEL.uppercase(),
+    RiskType.SIMM_INFLATION_LABEL.uppercase(),
+    RiskType.SIMM_INFLATION_VOL_LABEL.uppercase(),
+    RiskType.SIMM_XCCY_BASIS_LABEL.uppercase()
   )),
   SIMM_CREDIT_QUALIFYING("CreditQ", listOf(
-    RiskType.SIMM_CREDIT_Q_LABEL.toUpperCase(),
-    RiskType.SIMM_CREDIT_Q_VOL_LABEL.toUpperCase(),
-    RiskType.SIMM_BASE_CORR_LABEL.toUpperCase()
+    RiskType.SIMM_CREDIT_Q_LABEL.uppercase(),
+    RiskType.SIMM_CREDIT_Q_VOL_LABEL.uppercase(),
+    RiskType.SIMM_BASE_CORR_LABEL.uppercase()
   )),
   SIMM_CREDIT_NON_QUALIFYING("CreditNonQ", listOf(
-    RiskType.SIMM_CREDIT_NON_Q_LABEL.toUpperCase(),
-    RiskType.SIMM_CREDIT_NON_Q_VOL_LABEL.toUpperCase()
+    RiskType.SIMM_CREDIT_NON_Q_LABEL.uppercase(),
+    RiskType.SIMM_CREDIT_NON_Q_VOL_LABEL.uppercase()
   )),
   SIMM_EQUITY("Equity", listOf(
-    RiskType.SIMM_EQUITY_LABEL.toUpperCase(),
-    RiskType.SIMM_EQUITY_VOL_LABEL.toUpperCase()
+    RiskType.SIMM_EQUITY_LABEL.uppercase(),
+    RiskType.SIMM_EQUITY_VOL_LABEL.uppercase()
   )),
   SIMM_COMMODITY("Commodity", listOf(
-    RiskType.SIMM_COMMODITY_LABEL.toUpperCase(),
-    RiskType.SIMM_COMMODITY_VOL_LABEL.toUpperCase()
+    RiskType.SIMM_COMMODITY_LABEL.uppercase(),
+    RiskType.SIMM_COMMODITY_VOL_LABEL.uppercase()
   )),
   SIMM_FX("FX", listOf(
-    RiskType.SIMM_FX_LABEL.toUpperCase(),
-    RiskType.SIMM_FX_VOL_LABEL.toUpperCase()
+    RiskType.SIMM_FX_LABEL.uppercase(),
+    RiskType.SIMM_FX_VOL_LABEL.uppercase()
   )),
   SIMM_STANDARD("Standard", listOf(
-    RiskType.SIMM_IR_CURVE_LABEL.toUpperCase(),
-    RiskType.SIMM_IR_VOL_LABEL.toUpperCase(),
-    RiskType.SIMM_INFLATION_LABEL.toUpperCase(),
-    RiskType.SIMM_INFLATION_VOL_LABEL.toUpperCase(),
-    RiskType.SIMM_XCCY_BASIS_LABEL.toUpperCase(),
-    RiskType.SIMM_CREDIT_Q_LABEL.toUpperCase(),
-    RiskType.SIMM_CREDIT_Q_VOL_LABEL.toUpperCase(),
-    RiskType.SIMM_BASE_CORR_LABEL.toUpperCase(),
-    RiskType.SIMM_CREDIT_NON_Q_LABEL.toUpperCase(),
-    RiskType.SIMM_CREDIT_NON_Q_VOL_LABEL.toUpperCase(),
-    RiskType.SIMM_EQUITY_LABEL.toUpperCase(),
-    RiskType.SIMM_EQUITY_VOL_LABEL.toUpperCase(),
-    RiskType.SIMM_COMMODITY_LABEL.toUpperCase(),
-    RiskType.SIMM_COMMODITY_VOL_LABEL.toUpperCase(),
-    RiskType.SIMM_FX_LABEL.toUpperCase(),
-    RiskType.SIMM_FX_VOL_LABEL.toUpperCase()
+    RiskType.SIMM_IR_CURVE_LABEL.uppercase(),
+    RiskType.SIMM_IR_VOL_LABEL.uppercase(),
+    RiskType.SIMM_INFLATION_LABEL.uppercase(),
+    RiskType.SIMM_INFLATION_VOL_LABEL.uppercase(),
+    RiskType.SIMM_XCCY_BASIS_LABEL.uppercase(),
+    RiskType.SIMM_CREDIT_Q_LABEL.uppercase(),
+    RiskType.SIMM_CREDIT_Q_VOL_LABEL.uppercase(),
+    RiskType.SIMM_BASE_CORR_LABEL.uppercase(),
+    RiskType.SIMM_CREDIT_NON_Q_LABEL.uppercase(),
+    RiskType.SIMM_CREDIT_NON_Q_VOL_LABEL.uppercase(),
+    RiskType.SIMM_EQUITY_LABEL.uppercase(),
+    RiskType.SIMM_EQUITY_VOL_LABEL.uppercase(),
+    RiskType.SIMM_COMMODITY_LABEL.uppercase(),
+    RiskType.SIMM_COMMODITY_VOL_LABEL.uppercase(),
+    RiskType.SIMM_FX_LABEL.uppercase(),
+    RiskType.SIMM_FX_VOL_LABEL.uppercase()
   )),
-  SIMM_ADD_ON_NOTIONAL("Notional", listOf(RiskType.ADD_ON_NOTIONAL_LABEL.toUpperCase())),
-  SIMM_ADD_ON_FIXED_AMOUNT("Fixed", listOf(RiskType.ADD_ON_FIXED_LABEL.toUpperCase())),
-  SIMM_ADD_ON_NOTIONAL_FACTOR("Factor", listOf(RiskType.ADD_ON_FACTOR_LABEL.toUpperCase())),
-  SIMM_ADD_ON_PRODUCT_MULTIPLIER("Multiplier", listOf(RiskType.ADD_ON_MULTIPLIER_LABEL.toUpperCase())),
+  SIMM_ADD_ON_NOTIONAL("Notional", listOf(RiskType.ADD_ON_NOTIONAL_LABEL.uppercase())),
+  SIMM_ADD_ON_FIXED_AMOUNT("Fixed", listOf(RiskType.ADD_ON_FIXED_LABEL.uppercase())),
+  SIMM_ADD_ON_NOTIONAL_FACTOR("Factor", listOf(RiskType.ADD_ON_FACTOR_LABEL.uppercase())),
+  SIMM_ADD_ON_PRODUCT_MULTIPLIER("Multiplier", listOf(RiskType.ADD_ON_MULTIPLIER_LABEL.uppercase())),
   SIMM_ADD_ON("AddOn", listOf(
-    RiskType.ADD_ON_NOTIONAL_LABEL.toUpperCase(),
-    RiskType.ADD_ON_FACTOR_LABEL.toUpperCase(),
-    RiskType.ADD_ON_FIXED_LABEL.toUpperCase(),
-    RiskType.ADD_ON_MULTIPLIER_LABEL.toUpperCase()
+    RiskType.ADD_ON_NOTIONAL_LABEL.uppercase(),
+    RiskType.ADD_ON_FACTOR_LABEL.uppercase(),
+    RiskType.ADD_ON_FIXED_LABEL.uppercase(),
+    RiskType.ADD_ON_MULTIPLIER_LABEL.uppercase()
   )),
-  SCHEDULE_NOTIONAL("Notional", listOf(RiskType.SCHEDULE_NOTIONAL_LABEL.toUpperCase())),
-  SCHEDULE_PV("PV", listOf(RiskType.SCHEDULE_PV_LABEL.toUpperCase())),
+  SCHEDULE_NOTIONAL("Notional", listOf(RiskType.SCHEDULE_NOTIONAL_LABEL.uppercase())),
+  SCHEDULE_PV("PV", listOf(RiskType.SCHEDULE_PV_LABEL.uppercase())),
   SCHEDULE("Schedule", listOf(
-    RiskType.SCHEDULE_NOTIONAL_LABEL.toUpperCase(),
-    RiskType.SCHEDULE_PV_LABEL.toUpperCase()
+    RiskType.SCHEDULE_NOTIONAL_LABEL.uppercase(),
+    RiskType.SCHEDULE_PV_LABEL.uppercase()
   ));
 
   companion object {

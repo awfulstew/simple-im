@@ -49,16 +49,16 @@ data class Crif @JvmOverloads constructor(
 
   val imModel: ImModel by lazy {
     if (model.isNullOrBlank()) {
-      when (riskType.toUpperCase()) {
+      when (riskType.uppercase()) {
         // TODO: if the notional string is ever change to differentiate between schedule and simm then we need to update this
-        "Notional".toUpperCase() -> throw IllegalStateException("Model cannot be unspecified for the notional risk type")
+        "Notional".uppercase() -> throw IllegalStateException("Model cannot be unspecified for the notional risk type")
         in RiskType.SIMM_ADD_ON.labels -> ImModel.SIMM
         in RiskType.SIMM_STANDARD.labels -> ImModel.SIMM
         in RiskType.SCHEDULE.labels -> ImModel.SCHEDULE
         else -> throw IllegalStateException("Unknown risk type found when determining unspecified model: [${riskType}]")
       }
     } else {
-      when (model.toUpperCase()) {
+      when (model.uppercase()) {
         in ImModel.SIMM.labels -> ImModel.SIMM
         in ImModel.SCHEDULE.labels -> ImModel.SCHEDULE
         else -> throw IllegalStateException("Unknown IM model: [${model}]")
@@ -68,7 +68,7 @@ data class Crif @JvmOverloads constructor(
 
   val product: ProductType by lazy {
     when (imModel) {
-      ImModel.SIMM -> when (productType.toUpperCase()) {
+      ImModel.SIMM -> when (productType.uppercase()) {
         ProductType.SIMM_RATES_FX.label -> ProductType.SIMM_RATES_FX
         ProductType.SIMM_CREDIT.label -> ProductType.SIMM_CREDIT
         ProductType.SIMM_EQUITY.label -> ProductType.SIMM_EQUITY
@@ -79,7 +79,7 @@ data class Crif @JvmOverloads constructor(
           throw IllegalStateException("Unknown product label found when determining class for SIMM: [${productType}]")
         }
       }
-      ImModel.SCHEDULE -> when(productType.toUpperCase()) {
+      ImModel.SCHEDULE -> when(productType.uppercase()) {
         ProductType.SCHEDULE_RATES.label -> ProductType.SCHEDULE_RATES
         ProductType.SCHEDULE_EQUITY.label -> ProductType.SCHEDULE_EQUITY
         ProductType.SCHEDULE_FX.label -> ProductType.SCHEDULE_FX
@@ -91,7 +91,7 @@ data class Crif @JvmOverloads constructor(
   }
 
   val risk: RiskType by lazy {
-    when (riskType.toUpperCase()) {
+    when (riskType.uppercase()) {
       in RiskType.SIMM_FX.labels -> RiskType.SIMM_FX
       in RiskType.SIMM_EQUITY.labels -> RiskType.SIMM_EQUITY
       in RiskType.SIMM_CREDIT_QUALIFYING.labels -> RiskType.SIMM_CREDIT_QUALIFYING
@@ -112,7 +112,7 @@ data class Crif @JvmOverloads constructor(
       riskType.endsWith(SensitivityType.VEGA_SUFFIX, ignoreCase = true) -> SensitivityType.VEGA
       riskType.equals(RiskType.SIMM_BASE_CORR_LABEL, ignoreCase = true) -> SensitivityType.BASE_CORRELATION
       // since we already check for the vega suffix, any remaining SIMM sensitivities must be delta
-      riskType.toUpperCase() in RiskType.SIMM_STANDARD.labels -> SensitivityType.DELTA
+      riskType.uppercase() in RiskType.SIMM_STANDARD.labels -> SensitivityType.DELTA
       else -> throw IllegalStateException("Unknown risk type when determining sensitivity type: [${riskType}]")
     }
   }

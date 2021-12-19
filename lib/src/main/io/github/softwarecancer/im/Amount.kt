@@ -12,7 +12,7 @@ class Amount(_amount: String, _currency: String = FxRate.USD, private val amount
   private val string: String = _amount
   private val amount: BigDecimal = BigDecimal(_amount) // should throw if amount is poorly formatted
   private val currency: String =
-    if (_currency matches currencyRegex) _currency.toUpperCase()
+    if (_currency matches currencyRegex) _currency.uppercase()
     else throw IllegalStateException("Currency did not match expected currency code format: [${_currency}]")
 
   fun getAmount(config: CalculationConfig): BigDecimal {
