@@ -1,16 +1,9 @@
 package io.github.softwarecancer.im
 
-import java.math.BigDecimal
 import kotlin.test.Test
 import kotlin.test.assertEquals
-import io.github.softwarecancer.im.CrifTest.ListCarry.Companion.TWO_LABEL as TWO_LABEL
 
 class CrifTest {
-
-  @Test
-  fun `check that sum of empty list results in zero`() {
-    assertEquals(BigDecimal.ZERO, sumMargin(listOf<ImModelMargin>()))
-  }
 
   @Test
   fun `check sensitivity type is correctly initialized`() {
@@ -32,7 +25,7 @@ class CrifTest {
   }
 
   private enum class ListCarry(val carried: List<String>) {
-    ONE(listOf("one".toUpperCase())),
+    ONE(listOf("one".uppercase())),
     TWO(listOf(ListCarry.TWO_LABEL));
 
     companion object {

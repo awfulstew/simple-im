@@ -2,7 +2,7 @@
 /**
  * SimpleImParameterType.java
  *
- * Generated on ${buildTime?string.full} by simple-im-maven-plugin (${pluginVersion})
+ * Generated on ${buildTime?string.full} by simple-im-maven-plugin
  * DO NOT EDIT
  */
 package ${modelPackage}.parameter;

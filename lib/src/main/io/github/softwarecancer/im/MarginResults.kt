@@ -1,6 +1,5 @@
 package io.github.softwarecancer.im
 
-import java.lang.IllegalStateException
 import java.math.BigDecimal
 
 interface ImResult< out T : MarginIdentifier> {

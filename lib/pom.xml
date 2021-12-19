@@ -14,9 +14,6 @@
   <packaging>jar</packaging>
 
   <properties>
-    <kotlin.compiler.jvmTarget>11</kotlin.compiler.jvmTarget>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <kotlin.version>1.6.10</kotlin.version>
     <kotlin.serialization.version>1.3.1</kotlin.serialization.version>
   </properties>
 
@@ -24,30 +21,25 @@
     <dependency>
       <groupId>org.jetbrains.kotlin</groupId>
       <artifactId>kotlin-stdlib</artifactId>
-      <version>${kotlin.version}</version>
     </dependency>
-
+    <dependency>
+      <groupId>org.jetbrains.kotlin</groupId>
+      <artifactId>kotlin-test-junit5</artifactId>
+    </dependency>
     <dependency>
       <groupId>org.jetbrains.kotlinx</groupId>
       <artifactId>kotlinx-serialization-json</artifactId>
       <version>${kotlin.serialization.version}</version>
     </dependency>
-
-    <dependency>
-      <groupId>org.jetbrains.kotlin</groupId>
-      <artifactId>kotlin-test-junit5</artifactId>
-      <version>${kotlin.version}</version>
-      <scope>test</scope>
-    </dependency>
   </dependencies>
 
   <build>
-    <sourceDirectory>${basedir}/src/main</sourceDirectory>
-    <testSourceDirectory>${basedir}/src/test</testSourceDirectory>
-    <outputDirectory>${basedir}/target/classes</outputDirectory>
+    <sourceDirectory>${project.basedir}/src/main</sourceDirectory>
+    <testSourceDirectory>${project.basedir}/src/test</testSourceDirectory>
+
     <resources>
       <resource>
-        <directory>${basedir}/src/resources</directory>
+        <directory>${project.basedir}/src/resources</directory>
       </resource>
     </resources>
 
@@ -56,16 +48,10 @@
         <groupId>io.github.softwarecancer</groupId>
         <artifactId>simple-im-maven-plugin</artifactId>
         <version>${project.parent.version}</version>
-        <configuration>
-          <modelPackage>io.github.softwarecancer</modelPackage>
-          <calibrationDirectory>${project.basedir}/src/resources/calibrations</calibrationDirectory>
-          <relativeTargetJavaDir>${project.build.directory}/generated-sources/simple-im</relativeTargetJavaDir>
-          <pluginVersion>${project.parent.version}</pluginVersion>
-        </configuration>
         <executions>
           <execution>
             <goals>
-              <goal>calibrate</goal>
+              <goal>simm-generate-parameters</goal>
             </goals>
           </execution>
         </executions>
@@ -82,58 +68,24 @@
             </goals>
             <configuration>
               <sources>
-                <source>${project.build.directory}/generated-sources/simple-im</source>
+                <source>${project.build.directory}/generated-sources/simple-im-lib</source>
               </sources>
             </configuration>
           </execution>
         </executions>
       </plugin>
-
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-assembly-plugin</artifactId>
-        <version>3.3.0</version>
-        <executions>
-          <execution>
-            <id>make-assembly</id>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
-            </goals>
-            <configuration>
-              <descriptorRefs>
-                <descriptorRef>jar-with-dependencies</descriptorRef>
-              </descriptorRefs>
-            </configuration>
-          </execution>
-        </executions>
       </plugin>
-
       <plugin>
         <groupId>org.jetbrains.kotlin</groupId>
         <artifactId>kotlin-maven-plugin</artifactId>
-        <version>${kotlin.version}</version>
-        <executions>
-          <execution>
-            <id>compile</id>
-            <phase>process-sources</phase>
-            <goals>
-              <goal>compile</goal>
-            </goals>
-          </execution>
-        </executions>
         <configuration>
           <compilerPlugins>
             <plugin>kotlinx-serialization</plugin>
           </compilerPlugins>
         </configuration>
-        <dependencies>
-          <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-maven-serialization</artifactId>
-            <version>${kotlin.version}</version>
-          </dependency>
-        </dependencies>
       </plugin>
     </plugins>
   </build>
